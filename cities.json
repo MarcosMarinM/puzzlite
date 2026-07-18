@@ -1,0 +1,5138 @@
+[
+  {
+    "country": "Bosnia and Herzegovina",
+    "city": "Banja Luka",
+    "lat": 44.7725,
+    "lng": 17.1925,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Bosnia and Herzegovina",
+    "city": "Bihać",
+    "lat": 44.8147,
+    "lng": 15.8692,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Bosnia and Herzegovina",
+    "city": "Bijeljina",
+    "lat": 44.7567,
+    "lng": 19.2156,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Bosnia and Herzegovina",
+    "city": "Bugojno",
+    "lat": 44.0583,
+    "lng": 17.4478,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Bosnia and Herzegovina",
+    "city": "Cazin",
+    "lat": 44.97,
+    "lng": 15.94,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Bosnia and Herzegovina",
+    "city": "Derventa",
+    "lat": 44.98,
+    "lng": 17.91,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Bosnia and Herzegovina",
+    "city": "Doboj",
+    "lat": 44.7333,
+    "lng": 18.1333,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Bosnia and Herzegovina",
+    "city": "Goražde",
+    "lat": 43.66,
+    "lng": 18.98,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Bosnia and Herzegovina",
+    "city": "Gradačac",
+    "lat": 44.88,
+    "lng": 18.43,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Bosnia and Herzegovina",
+    "city": "Gradiška",
+    "lat": 45.14,
+    "lng": 17.25,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Bosnia and Herzegovina",
+    "city": "Gračanica",
+    "lat": 44.64,
+    "lng": 18.25,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Bosnia and Herzegovina",
+    "city": "Istočno Sarajevo",
+    "lat": 43.82,
+    "lng": 18.41,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Bosnia and Herzegovina",
+    "city": "Konjic",
+    "lat": 43.6513,
+    "lng": 17.9608,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Bosnia and Herzegovina",
+    "city": "Laktaši",
+    "lat": 44.89,
+    "lng": 17.45,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Bosnia and Herzegovina",
+    "city": "Livno",
+    "lat": 43.83,
+    "lng": 17.01,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Bosnia and Herzegovina",
+    "city": "Ljubuški",
+    "lat": 43.2,
+    "lng": 17.55,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Bosnia and Herzegovina",
+    "city": "Lukavac",
+    "lat": 44.53,
+    "lng": 18.53,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Bosnia and Herzegovina",
+    "city": "Mostar",
+    "lat": 43.3436,
+    "lng": 17.8075,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Bosnia and Herzegovina",
+    "city": "Prijedor",
+    "lat": 44.9667,
+    "lng": 16.7,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Bosnia and Herzegovina",
+    "city": "Sarajevo",
+    "lat": 43.8564,
+    "lng": 18.4131,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Bosnia and Herzegovina",
+    "city": "Srebrenik",
+    "lat": 44.7,
+    "lng": 18.55,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Bosnia and Herzegovina",
+    "city": "Trebinje",
+    "lat": 42.7089,
+    "lng": 18.3217,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Bosnia and Herzegovina",
+    "city": "Tuzla",
+    "lat": 44.5391,
+    "lng": 18.6752,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Bosnia and Herzegovina",
+    "city": "Visoko",
+    "lat": 43.99,
+    "lng": 18.17,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Bosnia and Herzegovina",
+    "city": "Zavidovići",
+    "lat": 44.44,
+    "lng": 18.16,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Bosnia and Herzegovina",
+    "city": "Zenica",
+    "lat": 44.2017,
+    "lng": 17.9039,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Bosnia and Herzegovina",
+    "city": "Zvornik",
+    "lat": 44.38,
+    "lng": 19.1,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Bosnia and Herzegovina",
+    "city": "Čapljina",
+    "lat": 43.21,
+    "lng": 17.7,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Bosnia and Herzegovina",
+    "city": "Široki Brijeg",
+    "lat": 43.38,
+    "lng": 17.59,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Bosnia and Herzegovina",
+    "city": "Živinice",
+    "lat": 44.45,
+    "lng": 18.65,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Croatia",
+    "city": "Bjelovar",
+    "lat": 45.8986,
+    "lng": 16.8489,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Croatia",
+    "city": "Dubrovnik",
+    "lat": 42.6481,
+    "lng": 18.0922,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Croatia",
+    "city": "Karlovac",
+    "lat": 45.4917,
+    "lng": 15.55,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Croatia",
+    "city": "Kaštela",
+    "lat": 43.55,
+    "lng": 16.32,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Croatia",
+    "city": "Koprivnica",
+    "lat": 46.1628,
+    "lng": 16.8275,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Croatia",
+    "city": "Križevci",
+    "lat": 46.03,
+    "lng": 16.53,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Croatia",
+    "city": "Kutina",
+    "lat": 45.47,
+    "lng": 16.77,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Croatia",
+    "city": "Osijek",
+    "lat": 45.5511,
+    "lng": 18.6939,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Croatia",
+    "city": "Petrinja",
+    "lat": 45.43,
+    "lng": 16.29,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Croatia",
+    "city": "Poreč",
+    "lat": 45.2272,
+    "lng": 13.5939,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Croatia",
+    "city": "Požega",
+    "lat": 45.33,
+    "lng": 17.67,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Croatia",
+    "city": "Pula",
+    "lat": 44.8683,
+    "lng": 13.8481,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Croatia",
+    "city": "Rijeka",
+    "lat": 45.3267,
+    "lng": 14.4424,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Croatia",
+    "city": "Rovinj",
+    "lat": 45.0817,
+    "lng": 13.6387,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Croatia",
+    "city": "Sinj",
+    "lat": 43.7,
+    "lng": 16.63,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Croatia",
+    "city": "Sisak",
+    "lat": 45.4661,
+    "lng": 16.3783,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Croatia",
+    "city": "Slavonski Brod",
+    "lat": 45.1603,
+    "lng": 18.0156,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Croatia",
+    "city": "Solin",
+    "lat": 43.54,
+    "lng": 16.48,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Croatia",
+    "city": "Split",
+    "lat": 43.5089,
+    "lng": 16.4392,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Croatia",
+    "city": "Varaždin",
+    "lat": 46.3044,
+    "lng": 16.3378,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Croatia",
+    "city": "Velika Gorica",
+    "lat": 45.71,
+    "lng": 16.07,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Croatia",
+    "city": "Vinkovci",
+    "lat": 45.28,
+    "lng": 18.8,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Croatia",
+    "city": "Virovitica",
+    "lat": 45.83,
+    "lng": 17.38,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Croatia",
+    "city": "Vukovar",
+    "lat": 45.3433,
+    "lng": 18.9997,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Croatia",
+    "city": "Zadar",
+    "lat": 44.1197,
+    "lng": 15.2422,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Croatia",
+    "city": "Zagreb",
+    "lat": 45.8144,
+    "lng": 15.978,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Croatia",
+    "city": "Zaprešić",
+    "lat": 45.86,
+    "lng": 15.8,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Croatia",
+    "city": "Čakovec",
+    "lat": 46.38,
+    "lng": 16.43,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Croatia",
+    "city": "Đakovo",
+    "lat": 45.3,
+    "lng": 18.41,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Croatia",
+    "city": "Šibenik",
+    "lat": 43.7272,
+    "lng": 15.9058,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Acerra",
+    "lat": 40.9333,
+    "lng": 14.3667,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Afragola",
+    "lat": 40.9167,
+    "lng": 14.3,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Alessandria",
+    "lat": 44.9167,
+    "lng": 8.6167,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Altamura",
+    "lat": 40.8333,
+    "lng": 16.55,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Ancona",
+    "lat": 43.6167,
+    "lng": 13.5167,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Andria",
+    "lat": 41.2269,
+    "lng": 16.2925,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Anzio",
+    "lat": 41.45,
+    "lng": 12.6333,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Aprilia",
+    "lat": 41.5833,
+    "lng": 12.65,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Arezzo",
+    "lat": 43.4667,
+    "lng": 11.8833,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Asti",
+    "lat": 44.9,
+    "lng": 8.2167,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Bari",
+    "lat": 41.1253,
+    "lng": 16.8667,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Barletta",
+    "lat": 41.3167,
+    "lng": 16.2833,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Bergamo",
+    "lat": 45.6983,
+    "lng": 9.6773,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Bolzano",
+    "lat": 46.4983,
+    "lng": 11.3548,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Brindisi",
+    "lat": 40.6333,
+    "lng": 17.9333,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Busto Arsizio",
+    "lat": 45.6167,
+    "lng": 8.85,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Cagliari",
+    "lat": 39.2149,
+    "lng": 9.1095,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Caltanissetta",
+    "lat": 37.4833,
+    "lng": 14.0667,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Carpi",
+    "lat": 44.7833,
+    "lng": 10.8833,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Carrara",
+    "lat": 44.0833,
+    "lng": 10.1,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Caserta",
+    "lat": 41.0767,
+    "lng": 14.3333,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Casoria",
+    "lat": 40.8833,
+    "lng": 14.2833,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Castellammare di Stabia",
+    "lat": 40.7,
+    "lng": 14.4833,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Catanzaro",
+    "lat": 38.9,
+    "lng": 16.6,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Cerignola",
+    "lat": 41.2667,
+    "lng": 15.9,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Cesena",
+    "lat": 44.1333,
+    "lng": 12.2333,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Cinisello Balsamo",
+    "lat": 45.55,
+    "lng": 9.2333,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Como",
+    "lat": 45.8167,
+    "lng": 9.0833,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Corigliano-Rossano",
+    "lat": 39.5833,
+    "lng": 16.5167,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Cosenza",
+    "lat": 39.3,
+    "lng": 16.25,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Cremona",
+    "lat": 45.1333,
+    "lng": 10.0167,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Crotone",
+    "lat": 39.0833,
+    "lng": 17.1167,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Cuneo",
+    "lat": 44.3833,
+    "lng": 7.55,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Faenza",
+    "lat": 44.2833,
+    "lng": 11.8833,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Fano",
+    "lat": 43.8333,
+    "lng": 13.0167,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Firenze",
+    "lat": 43.7714,
+    "lng": 11.2542,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Fiumicino",
+    "lat": 41.7667,
+    "lng": 12.2333,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Gela",
+    "lat": 37.0667,
+    "lng": 14.25,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Genova",
+    "lat": 44.4072,
+    "lng": 8.934,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Giugliano in Campania",
+    "lat": 40.9333,
+    "lng": 14.2,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Grosseto",
+    "lat": 42.7667,
+    "lng": 11.1167,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Guidonia Montecelio",
+    "lat": 42.0,
+    "lng": 12.7167,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Imola",
+    "lat": 44.35,
+    "lng": 11.7167,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "L'Aquila",
+    "lat": 42.35,
+    "lng": 13.4,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "La Spezia",
+    "lat": 44.1067,
+    "lng": 9.8267,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Lamezia Terme",
+    "lat": 38.9667,
+    "lng": 16.3167,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Lecce",
+    "lat": 40.35,
+    "lng": 18.1667,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Legnano",
+    "lat": 45.5833,
+    "lng": 8.9167,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Livorno",
+    "lat": 43.55,
+    "lng": 10.3167,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Lucca",
+    "lat": 43.85,
+    "lng": 10.5167,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Marano di Napoli",
+    "lat": 40.9,
+    "lng": 14.1667,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Marsala",
+    "lat": 37.8,
+    "lng": 12.4333,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Massa",
+    "lat": 44.0333,
+    "lng": 10.1333,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Matera",
+    "lat": 40.6667,
+    "lng": 16.6,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Milano",
+    "lat": 45.4669,
+    "lng": 9.19,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Molfetta",
+    "lat": 41.2,
+    "lng": 16.6,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Moncalieri",
+    "lat": 45.0,
+    "lng": 7.6833,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Monza",
+    "lat": 45.5833,
+    "lng": 9.2667,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Napoli",
+    "lat": 40.8358,
+    "lng": 14.2486,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Novara",
+    "lat": 45.45,
+    "lng": 8.6167,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Padova",
+    "lat": 45.4078,
+    "lng": 11.8733,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Parma",
+    "lat": 44.8015,
+    "lng": 10.328,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Pavia",
+    "lat": 45.1833,
+    "lng": 9.15,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Perugia",
+    "lat": 43.1119,
+    "lng": 12.3885,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Pesaro",
+    "lat": 43.91,
+    "lng": 12.91,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Pescara",
+    "lat": 42.4643,
+    "lng": 14.2139,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Piacenza",
+    "lat": 45.05,
+    "lng": 9.6975,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Pisa",
+    "lat": 43.7167,
+    "lng": 10.4,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Pistoia",
+    "lat": 43.9333,
+    "lng": 10.9167,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Pomezia",
+    "lat": 41.6667,
+    "lng": 12.5,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Potenza",
+    "lat": 40.6333,
+    "lng": 15.8,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Pozzuoli",
+    "lat": 40.8333,
+    "lng": 14.1167,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Prato",
+    "lat": 43.8808,
+    "lng": 11.0966,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Quartu Sant'Elena",
+    "lat": 39.2333,
+    "lng": 9.1833,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Ragusa",
+    "lat": 36.92,
+    "lng": 14.72,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Ravenna",
+    "lat": 44.4161,
+    "lng": 12.2017,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Reggio Calabria",
+    "lat": 38.1144,
+    "lng": 15.65,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Rimini",
+    "lat": 44.0594,
+    "lng": 12.5683,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Roma",
+    "lat": 41.8931,
+    "lng": 12.4828,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Salerno",
+    "lat": 40.6806,
+    "lng": 14.7594,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Sassari",
+    "lat": 40.7259,
+    "lng": 8.575,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Savona",
+    "lat": 44.3,
+    "lng": 8.4833,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Sesto San Giovanni",
+    "lat": 45.5333,
+    "lng": 9.2333,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Siracusa",
+    "lat": 37.0755,
+    "lng": 15.2866,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Taranto",
+    "lat": 40.4711,
+    "lng": 17.2431,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Terni",
+    "lat": 42.5667,
+    "lng": 12.65,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Torino",
+    "lat": 45.0792,
+    "lng": 7.6761,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Torre del Greco",
+    "lat": 40.7833,
+    "lng": 14.3667,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Trento",
+    "lat": 46.0667,
+    "lng": 11.1167,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Treviso",
+    "lat": 45.6667,
+    "lng": 12.25,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Trieste",
+    "lat": 45.6503,
+    "lng": 13.7703,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Udine",
+    "lat": 46.0667,
+    "lng": 13.2333,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Varese",
+    "lat": 45.8167,
+    "lng": 8.8167,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Venezia",
+    "lat": 45.4408,
+    "lng": 12.3155,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Verona",
+    "lat": 45.4386,
+    "lng": 10.9928,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Viareggio",
+    "lat": 43.8667,
+    "lng": 10.25,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Vicenza",
+    "lat": 45.5455,
+    "lng": 11.5354,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Vigevano",
+    "lat": 45.3167,
+    "lng": 8.8667,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Viterbo",
+    "lat": 42.4167,
+    "lng": 12.1,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Italy",
+    "city": "Vittoria",
+    "lat": 36.95,
+    "lng": 14.5333,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Macedonia",
+    "city": "Aračinovo",
+    "lat": 42.0264,
+    "lng": 21.5619,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Macedonia",
+    "city": "Berovo",
+    "lat": 41.7,
+    "lng": 22.85,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Macedonia",
+    "city": "Bitola",
+    "lat": 41.0312,
+    "lng": 21.3347,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Macedonia",
+    "city": "Bogdanci",
+    "lat": 41.21,
+    "lng": 22.57,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Macedonia",
+    "city": "Bosilovo",
+    "lat": 41.4406,
+    "lng": 22.7278,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Macedonia",
+    "city": "Brvenica",
+    "lat": 41.9667,
+    "lng": 21.0,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Macedonia",
+    "city": "Debar",
+    "lat": 41.5248,
+    "lng": 20.5275,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Macedonia",
+    "city": "Debarca",
+    "lat": 41.2989,
+    "lng": 20.8028,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Macedonia",
+    "city": "Delčevo",
+    "lat": 41.97,
+    "lng": 22.77,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Macedonia",
+    "city": "Demir Hisar",
+    "lat": 41.22,
+    "lng": 21.2,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Macedonia",
+    "city": "Demir Kapija",
+    "lat": 41.41,
+    "lng": 22.24,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Macedonia",
+    "city": "Gevgelija",
+    "lat": 41.1391,
+    "lng": 22.5022,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Macedonia",
+    "city": "Gostivar",
+    "lat": 41.796,
+    "lng": 20.9088,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Macedonia",
+    "city": "Jegunovce",
+    "lat": 42.0736,
+    "lng": 21.1239,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Macedonia",
+    "city": "Kavadarci",
+    "lat": 41.433,
+    "lng": 22.011,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Macedonia",
+    "city": "Kičevo",
+    "lat": 41.5129,
+    "lng": 20.9588,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Macedonia",
+    "city": "Kočani",
+    "lat": 41.9164,
+    "lng": 22.4128,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Macedonia",
+    "city": "Kratovo",
+    "lat": 42.08,
+    "lng": 22.17,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Macedonia",
+    "city": "Kriva Palanka",
+    "lat": 42.2018,
+    "lng": 22.3318,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Macedonia",
+    "city": "Kruševo",
+    "lat": 41.37,
+    "lng": 21.25,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Macedonia",
+    "city": "Kumanovo",
+    "lat": 42.1354,
+    "lng": 21.7147,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Macedonia",
+    "city": "Lipkovo",
+    "lat": 42.15,
+    "lng": 21.5833,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Macedonia",
+    "city": "Makedonska Kamenica",
+    "lat": 42.02,
+    "lng": 22.59,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Macedonia",
+    "city": "Makedonski Brod",
+    "lat": 41.51,
+    "lng": 21.22,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Macedonia",
+    "city": "Mavrovo i Rostuša",
+    "lat": 41.9833,
+    "lng": 20.7333,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Macedonia",
+    "city": "Negotino",
+    "lat": 41.485,
+    "lng": 22.09,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Macedonia",
+    "city": "Novo Selo",
+    "lat": 41.4144,
+    "lng": 22.8816,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Macedonia",
+    "city": "Ohrid",
+    "lat": 41.1173,
+    "lng": 20.8019,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Macedonia",
+    "city": "Pehčevo",
+    "lat": 41.76,
+    "lng": 22.89,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Macedonia",
+    "city": "Plasnica",
+    "lat": 41.4671,
+    "lng": 21.0611,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Macedonia",
+    "city": "Prilep",
+    "lat": 41.3451,
+    "lng": 21.555,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Macedonia",
+    "city": "Probištip",
+    "lat": 41.99,
+    "lng": 22.18,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Macedonia",
+    "city": "Radoviš",
+    "lat": 41.6386,
+    "lng": 22.4647,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Macedonia",
+    "city": "Resen",
+    "lat": 41.08,
+    "lng": 21.01,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Macedonia",
+    "city": "Skopje",
+    "lat": 41.9973,
+    "lng": 21.428,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Macedonia",
+    "city": "Sopište",
+    "lat": 41.9547,
+    "lng": 21.0939,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Macedonia",
+    "city": "Struga",
+    "lat": 41.178,
+    "lng": 20.6743,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Macedonia",
+    "city": "Strumica",
+    "lat": 41.4378,
+    "lng": 22.6436,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Macedonia",
+    "city": "Studeničani",
+    "lat": 41.9167,
+    "lng": 21.5167,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Macedonia",
+    "city": "Sveti Nikole",
+    "lat": 41.865,
+    "lng": 21.9425,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Macedonia",
+    "city": "Tearce",
+    "lat": 42.1,
+    "lng": 21.05,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Macedonia",
+    "city": "Tetovo",
+    "lat": 42.0096,
+    "lng": 20.9715,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Macedonia",
+    "city": "Valandovo",
+    "lat": 41.31,
+    "lng": 22.56,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Macedonia",
+    "city": "Vasilevo",
+    "lat": 41.4751,
+    "lng": 22.642,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Macedonia",
+    "city": "Veles",
+    "lat": 41.7155,
+    "lng": 21.7707,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Macedonia",
+    "city": "Vevčani",
+    "lat": 41.7056,
+    "lng": 20.5883,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Macedonia",
+    "city": "Vinica",
+    "lat": 41.88,
+    "lng": 22.5,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Macedonia",
+    "city": "Zelenikovo",
+    "lat": 41.8019,
+    "lng": 21.6026,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Macedonia",
+    "city": "Čučer-Sandevo",
+    "lat": 42.1036,
+    "lng": 21.4611,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Macedonia",
+    "city": "Štip",
+    "lat": 41.7458,
+    "lng": 22.1954,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Montenegro",
+    "city": "Andrijevica",
+    "lat": 42.73,
+    "lng": 19.79,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Mediterranean",
+      "Northern Mediterranean"
+    ]
+  },
+  {
+    "country": "Montenegro",
+    "city": "Bar",
+    "lat": 42.0931,
+    "lng": 19.1003,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Mediterranean",
+      "Northern Mediterranean"
+    ]
+  },
+  {
+    "country": "Montenegro",
+    "city": "Berane",
+    "lat": 42.8425,
+    "lng": 19.8733,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Mediterranean",
+      "Northern Mediterranean"
+    ]
+  },
+  {
+    "country": "Montenegro",
+    "city": "Bijelo Polje",
+    "lat": 43.0383,
+    "lng": 19.7483,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Mediterranean",
+      "Northern Mediterranean"
+    ]
+  },
+  {
+    "country": "Montenegro",
+    "city": "Budva",
+    "lat": 42.288,
+    "lng": 18.84,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Mediterranean",
+      "Northern Mediterranean"
+    ]
+  },
+  {
+    "country": "Montenegro",
+    "city": "Cetinje",
+    "lat": 42.3906,
+    "lng": 18.9142,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Mediterranean",
+      "Northern Mediterranean"
+    ]
+  },
+  {
+    "country": "Montenegro",
+    "city": "Danilovgrad",
+    "lat": 42.56,
+    "lng": 19.05,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Mediterranean",
+      "Northern Mediterranean"
+    ]
+  },
+  {
+    "country": "Montenegro",
+    "city": "Herceg Novi",
+    "lat": 42.4531,
+    "lng": 18.5375,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Mediterranean",
+      "Northern Mediterranean"
+    ]
+  },
+  {
+    "country": "Montenegro",
+    "city": "Kolašin",
+    "lat": 42.83,
+    "lng": 19.52,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Mediterranean",
+      "Northern Mediterranean"
+    ]
+  },
+  {
+    "country": "Montenegro",
+    "city": "Kotor",
+    "lat": 42.4246,
+    "lng": 18.7712,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Mediterranean",
+      "Northern Mediterranean"
+    ]
+  },
+  {
+    "country": "Montenegro",
+    "city": "Mojkovac",
+    "lat": 42.9603,
+    "lng": 19.5833,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Mediterranean",
+      "Northern Mediterranean"
+    ]
+  },
+  {
+    "country": "Montenegro",
+    "city": "Nikšić",
+    "lat": 42.7731,
+    "lng": 18.9561,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Mediterranean",
+      "Northern Mediterranean"
+    ]
+  },
+  {
+    "country": "Montenegro",
+    "city": "Petnjica",
+    "lat": 42.89,
+    "lng": 19.97,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Mediterranean",
+      "Northern Mediterranean"
+    ]
+  },
+  {
+    "country": "Montenegro",
+    "city": "Plav",
+    "lat": 42.5969,
+    "lng": 19.9456,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Mediterranean",
+      "Northern Mediterranean"
+    ]
+  },
+  {
+    "country": "Montenegro",
+    "city": "Pljevlja",
+    "lat": 43.3568,
+    "lng": 19.3584,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Mediterranean",
+      "Northern Mediterranean"
+    ]
+  },
+  {
+    "country": "Montenegro",
+    "city": "Podgorica",
+    "lat": 42.4304,
+    "lng": 19.2594,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Mediterranean",
+      "Northern Mediterranean"
+    ]
+  },
+  {
+    "country": "Montenegro",
+    "city": "Rožaje",
+    "lat": 42.8436,
+    "lng": 20.1672,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Mediterranean",
+      "Northern Mediterranean"
+    ]
+  },
+  {
+    "country": "Montenegro",
+    "city": "Tivat",
+    "lat": 42.4325,
+    "lng": 18.7,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Mediterranean",
+      "Northern Mediterranean"
+    ]
+  },
+  {
+    "country": "Montenegro",
+    "city": "Tuzi",
+    "lat": 42.36,
+    "lng": 19.33,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Mediterranean",
+      "Northern Mediterranean"
+    ]
+  },
+  {
+    "country": "Montenegro",
+    "city": "Ulcinj",
+    "lat": 41.9294,
+    "lng": 19.2242,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Mediterranean",
+      "Northern Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Agualva-Cacém",
+    "lat": 38.7687,
+    "lng": -9.2983,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Albufeira",
+    "lat": 37.09,
+    "lng": -8.25,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Almada",
+    "lat": 38.6807,
+    "lng": -9.1576,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Alverca do Ribatejo",
+    "lat": 38.89,
+    "lng": -9.03,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Amadora",
+    "lat": 38.7595,
+    "lng": -9.2232,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Amora",
+    "lat": 38.63,
+    "lng": -9.11,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Arcos de Valdevez",
+    "lat": 41.85,
+    "lng": -8.4167,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Aveiro",
+    "lat": 40.6405,
+    "lng": -8.6538,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Barcelos",
+    "lat": 41.53,
+    "lng": -8.61,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Barreiro",
+    "lat": 38.66,
+    "lng": -9.07,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Beja",
+    "lat": 38.01,
+    "lng": -7.86,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Braga",
+    "lat": 41.5516,
+    "lng": -8.4285,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Bragança",
+    "lat": 41.8,
+    "lng": -6.75,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Caldas da Rainha",
+    "lat": 39.4,
+    "lng": -9.13,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Caminha",
+    "lat": 41.8333,
+    "lng": -8.8333,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Caniço",
+    "lat": 32.65,
+    "lng": -16.85,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Castelo Branco",
+    "lat": 39.82,
+    "lng": -7.49,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Chaves",
+    "lat": 41.74,
+    "lng": -7.47,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Coimbra",
+    "lat": 40.2033,
+    "lng": -8.4103,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Covilhã",
+    "lat": 40.28,
+    "lng": -7.5,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Ermesinde",
+    "lat": 41.2,
+    "lng": -8.55,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Espinho",
+    "lat": 41.0,
+    "lng": -8.64,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Faro",
+    "lat": 37.01,
+    "lng": -7.93,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Felgueiras",
+    "lat": 41.3667,
+    "lng": -8.15,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Figueira da Foz",
+    "lat": 40.15,
+    "lng": -8.86,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Funchal",
+    "lat": 32.6669,
+    "lng": -16.9241,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Gondomar",
+    "lat": 41.15,
+    "lng": -8.53,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Guarda",
+    "lat": 40.53,
+    "lng": -7.33,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Guimarães",
+    "lat": 41.445,
+    "lng": -8.2908,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Leiria",
+    "lat": 39.74,
+    "lng": -8.81,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Lisboa",
+    "lat": 38.7223,
+    "lng": -9.1393,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Loulé",
+    "lat": 37.1379,
+    "lng": -7.9659,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Loures",
+    "lat": 38.83,
+    "lng": -9.17,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Lousada",
+    "lat": 41.276,
+    "lng": -8.2802,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Maia",
+    "lat": 41.23,
+    "lng": -8.62,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Matosinhos",
+    "lat": 41.18,
+    "lng": -8.69,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Montijo",
+    "lat": 38.71,
+    "lng": -8.97,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Monção",
+    "lat": 42.0783,
+    "lng": -8.4814,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Odivelas",
+    "lat": 38.79,
+    "lng": -9.17,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Olhão",
+    "lat": 37.02,
+    "lng": -7.83,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Paços de Ferreira",
+    "lat": 41.3,
+    "lng": -8.3833,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Penafiel",
+    "lat": 41.2311,
+    "lng": -8.2864,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Peso da Régua",
+    "lat": 41.1667,
+    "lng": -7.8,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Ponta Delgada",
+    "lat": 37.74,
+    "lng": -25.67,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Ponte de Lima",
+    "lat": 41.7671,
+    "lng": -8.5833,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Portalegre",
+    "lat": 39.2917,
+    "lng": -7.4242,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Portimão",
+    "lat": 37.13,
+    "lng": -8.53,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Porto",
+    "lat": 41.1579,
+    "lng": -8.6291,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Póvoa de Santa Iria",
+    "lat": 38.85,
+    "lng": -9.05,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Póvoa de Varzim",
+    "lat": 41.38,
+    "lng": -8.76,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Queluz",
+    "lat": 38.7516,
+    "lng": -9.2477,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Rio Tinto",
+    "lat": 41.18,
+    "lng": -8.55,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Sacavém",
+    "lat": 38.79,
+    "lng": -9.11,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Santa Maria da Feira",
+    "lat": 40.92,
+    "lng": -8.54,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Santarém",
+    "lat": 39.23,
+    "lng": -8.68,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Santo Tirso",
+    "lat": 41.34,
+    "lng": -8.48,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Seixal",
+    "lat": 38.64,
+    "lng": -9.11,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Senhora da Hora",
+    "lat": 41.19,
+    "lng": -8.65,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Setúbal",
+    "lat": 38.5244,
+    "lng": -8.893,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "São João da Madeira",
+    "lat": 40.89,
+    "lng": -8.49,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "São Mamede de Infesta",
+    "lat": 41.19,
+    "lng": -8.61,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Tavira",
+    "lat": 37.1272,
+    "lng": -7.6478,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Valença",
+    "lat": 42.03,
+    "lng": -8.6333,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Valongo",
+    "lat": 41.21,
+    "lng": -8.5,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Vila Nova de Famalicão",
+    "lat": 41.41,
+    "lng": -8.52,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Vila Nova de Gaia",
+    "lat": 41.1338,
+    "lng": -8.6172,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Vila Real",
+    "lat": 41.3,
+    "lng": -7.74,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Vila do Conde",
+    "lat": 41.35,
+    "lng": -8.74,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Viseu",
+    "lat": 40.661,
+    "lng": -7.9097,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Portugal",
+    "city": "Évora",
+    "lat": 38.571,
+    "lng": -7.9092,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Serbia",
+    "city": "Bačka Palanka",
+    "lat": 45.25,
+    "lng": 19.39,
+    "radius": 7000,
+    "regions": [
+      "Balkans"
+    ]
+  },
+  {
+    "country": "Serbia",
+    "city": "Beograd",
+    "lat": 44.8178,
+    "lng": 20.4569,
+    "radius": 7000,
+    "regions": [
+      "Balkans"
+    ]
+  },
+  {
+    "country": "Serbia",
+    "city": "Bor",
+    "lat": 44.07,
+    "lng": 22.1,
+    "radius": 7000,
+    "regions": [
+      "Balkans"
+    ]
+  },
+  {
+    "country": "Serbia",
+    "city": "Jagodina",
+    "lat": 43.98,
+    "lng": 21.26,
+    "radius": 7000,
+    "regions": [
+      "Balkans"
+    ]
+  },
+  {
+    "country": "Serbia",
+    "city": "Kosovska Mitrovica",
+    "lat": 42.8914,
+    "lng": 20.866,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Serbia",
+    "city": "Kragujevac",
+    "lat": 44.0101,
+    "lng": 20.9172,
+    "radius": 7000,
+    "regions": [
+      "Balkans"
+    ]
+  },
+  {
+    "country": "Serbia",
+    "city": "Kraljevo",
+    "lat": 43.7234,
+    "lng": 20.687,
+    "radius": 7000,
+    "regions": [
+      "Balkans"
+    ]
+  },
+  {
+    "country": "Serbia",
+    "city": "Kruševac",
+    "lat": 43.58,
+    "lng": 21.33,
+    "radius": 7000,
+    "regions": [
+      "Balkans"
+    ]
+  },
+  {
+    "country": "Serbia",
+    "city": "Leskovac",
+    "lat": 43.0,
+    "lng": 21.95,
+    "radius": 7000,
+    "regions": [
+      "Balkans"
+    ]
+  },
+  {
+    "country": "Serbia",
+    "city": "Niš",
+    "lat": 43.3192,
+    "lng": 21.8961,
+    "radius": 7000,
+    "regions": [
+      "Balkans"
+    ]
+  },
+  {
+    "country": "Serbia",
+    "city": "Novi Sad",
+    "lat": 45.2644,
+    "lng": 19.8317,
+    "radius": 7000,
+    "regions": [
+      "Balkans"
+    ]
+  },
+  {
+    "country": "Serbia",
+    "city": "Pančevo",
+    "lat": 44.8739,
+    "lng": 20.6519,
+    "radius": 7000,
+    "regions": [
+      "Balkans"
+    ]
+  },
+  {
+    "country": "Serbia",
+    "city": "Paraćin",
+    "lat": 43.86,
+    "lng": 21.41,
+    "radius": 7000,
+    "regions": [
+      "Balkans"
+    ]
+  },
+  {
+    "country": "Serbia",
+    "city": "Peć",
+    "lat": 42.6591,
+    "lng": 20.2882,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Serbia",
+    "city": "Pirot",
+    "lat": 43.16,
+    "lng": 22.58,
+    "radius": 7000,
+    "regions": [
+      "Balkans"
+    ]
+  },
+  {
+    "country": "Serbia",
+    "city": "Požarevac",
+    "lat": 44.62,
+    "lng": 21.1897,
+    "radius": 7000,
+    "regions": [
+      "Balkans"
+    ]
+  },
+  {
+    "country": "Serbia",
+    "city": "Prizren",
+    "lat": 42.2139,
+    "lng": 20.7397,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Serbia",
+    "city": "Priština",
+    "lat": 42.6629,
+    "lng": 21.1655,
+    "radius": 7000,
+    "regions": [
+      "Balkans"
+    ]
+  },
+  {
+    "country": "Serbia",
+    "city": "Ruma",
+    "lat": 45.01,
+    "lng": 19.82,
+    "radius": 7000,
+    "regions": [
+      "Balkans"
+    ]
+  },
+  {
+    "country": "Serbia",
+    "city": "Smederevo",
+    "lat": 44.6633,
+    "lng": 20.9289,
+    "radius": 7000,
+    "regions": [
+      "Balkans"
+    ]
+  },
+  {
+    "country": "Serbia",
+    "city": "Sombor",
+    "lat": 45.77,
+    "lng": 19.12,
+    "radius": 7000,
+    "regions": [
+      "Balkans"
+    ]
+  },
+  {
+    "country": "Serbia",
+    "city": "Sremska Mitrovica",
+    "lat": 44.9661,
+    "lng": 19.6106,
+    "radius": 7000,
+    "regions": [
+      "Balkans"
+    ]
+  },
+  {
+    "country": "Serbia",
+    "city": "Stara Pazova",
+    "lat": 44.98,
+    "lng": 20.15,
+    "radius": 7000,
+    "regions": [
+      "Balkans"
+    ]
+  },
+  {
+    "country": "Serbia",
+    "city": "Subotica",
+    "lat": 46.1002,
+    "lng": 19.6653,
+    "radius": 7000,
+    "regions": [
+      "Balkans"
+    ]
+  },
+  {
+    "country": "Serbia",
+    "city": "Užice",
+    "lat": 43.85,
+    "lng": 19.85,
+    "radius": 7000,
+    "regions": [
+      "Balkans"
+    ]
+  },
+  {
+    "country": "Serbia",
+    "city": "Valjevo",
+    "lat": 44.2708,
+    "lng": 19.8866,
+    "radius": 7000,
+    "regions": [
+      "Balkans"
+    ]
+  },
+  {
+    "country": "Serbia",
+    "city": "Zaječar",
+    "lat": 43.9,
+    "lng": 22.28,
+    "radius": 7000,
+    "regions": [
+      "Balkans"
+    ]
+  },
+  {
+    "country": "Serbia",
+    "city": "Zrenjanin",
+    "lat": 45.3778,
+    "lng": 20.3861,
+    "radius": 7000,
+    "regions": [
+      "Balkans"
+    ]
+  },
+  {
+    "country": "Serbia",
+    "city": "Čačak",
+    "lat": 43.8914,
+    "lng": 20.3497,
+    "radius": 7000,
+    "regions": [
+      "Balkans"
+    ]
+  },
+  {
+    "country": "Serbia",
+    "city": "Šabac",
+    "lat": 44.7558,
+    "lng": 19.6939,
+    "radius": 7000,
+    "regions": [
+      "Balkans"
+    ]
+  },
+  {
+    "country": "Slovenia",
+    "city": "Ajdovščina",
+    "lat": 45.89,
+    "lng": 13.9,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Slovenia",
+    "city": "Celje",
+    "lat": 46.2309,
+    "lng": 15.2604,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Slovenia",
+    "city": "Domžale",
+    "lat": 46.1376,
+    "lng": 14.5937,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Slovenia",
+    "city": "Grosuplje",
+    "lat": 45.95,
+    "lng": 14.65,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Slovenia",
+    "city": "Izola",
+    "lat": 45.53,
+    "lng": 13.66,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Slovenia",
+    "city": "Jesenice",
+    "lat": 46.4306,
+    "lng": 14.06,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Slovenia",
+    "city": "Kamnik",
+    "lat": 46.2259,
+    "lng": 14.6121,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Slovenia",
+    "city": "Koper",
+    "lat": 45.5481,
+    "lng": 13.7303,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Slovenia",
+    "city": "Kočevje",
+    "lat": 45.64,
+    "lng": 14.86,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Slovenia",
+    "city": "Kranj",
+    "lat": 46.2389,
+    "lng": 14.3556,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Slovenia",
+    "city": "Ljubljana",
+    "lat": 46.0511,
+    "lng": 14.5051,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Slovenia",
+    "city": "Logatec",
+    "lat": 45.91,
+    "lng": 14.22,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Slovenia",
+    "city": "Maribor",
+    "lat": 46.5547,
+    "lng": 15.6467,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Slovenia",
+    "city": "Mengeš",
+    "lat": 46.16,
+    "lng": 14.57,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Slovenia",
+    "city": "Murska Sobota",
+    "lat": 46.6625,
+    "lng": 16.1664,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Slovenia",
+    "city": "Nova Gorica",
+    "lat": 45.956,
+    "lng": 13.6485,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Slovenia",
+    "city": "Novo Mesto",
+    "lat": 45.804,
+    "lng": 15.1689,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Slovenia",
+    "city": "Postojna",
+    "lat": 45.78,
+    "lng": 14.2,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Slovenia",
+    "city": "Ptuj",
+    "lat": 46.4199,
+    "lng": 15.8697,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Slovenia",
+    "city": "Slovenj Gradec",
+    "lat": 46.5,
+    "lng": 15.07,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Slovenia",
+    "city": "Slovenska Bistrica",
+    "lat": 46.38,
+    "lng": 15.56,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Slovenia",
+    "city": "Trbovlje",
+    "lat": 46.155,
+    "lng": 15.0533,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Slovenia",
+    "city": "Velenje",
+    "lat": 46.3594,
+    "lng": 15.11,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Slovenia",
+    "city": "Vrhnika",
+    "lat": 45.96,
+    "lng": 14.28,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Slovenia",
+    "city": "Škofja Loka",
+    "lat": 46.1656,
+    "lng": 14.3064,
+    "radius": 7000,
+    "regions": [
+      "Balkans",
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "A Coruña",
+    "lat": 43.3623,
+    "lng": -8.4115,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Alacant",
+    "lat": 38.3452,
+    "lng": -0.481,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Albacete",
+    "lat": 38.9942,
+    "lng": -1.8581,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Alcalá de Guadaíra",
+    "lat": 37.3379,
+    "lng": -5.839,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Alcalá de Henares",
+    "lat": 40.4818,
+    "lng": -3.3644,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Alcobendas",
+    "lat": 40.539,
+    "lng": -3.637,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Alcorcón",
+    "lat": 40.3458,
+    "lng": -3.8249,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Algeciras",
+    "lat": 36.128,
+    "lng": -5.446,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Almería",
+    "lat": 36.834,
+    "lng": -2.4637,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Arona",
+    "lat": 28.083,
+    "lng": -16.666,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Avilés",
+    "lat": 43.553,
+    "lng": -5.925,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Badajoz",
+    "lat": 38.8794,
+    "lng": -6.9706,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Badalona",
+    "lat": 41.45,
+    "lng": 2.2474,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Barakaldo",
+    "lat": 43.292,
+    "lng": -2.993,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Barcelona",
+    "lat": 41.3851,
+    "lng": 2.1734,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Benidorm",
+    "lat": 38.5411,
+    "lng": -0.1226,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Bilbao",
+    "lat": 43.263,
+    "lng": -2.935,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Burgos",
+    "lat": 42.3439,
+    "lng": -3.6969,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Cartagena",
+    "lat": 37.6057,
+    "lng": -0.9913,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Castellón de la Plana",
+    "lat": 39.986,
+    "lng": -0.0517,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Ceuta",
+    "lat": 35.8894,
+    "lng": -5.3213,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Chiclana de la Frontera",
+    "lat": 36.417,
+    "lng": -6.15,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Cornellà de Llobregat",
+    "lat": 41.355,
+    "lng": 2.071,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Coslada",
+    "lat": 40.423,
+    "lng": -3.535,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Cádiz",
+    "lat": 36.5271,
+    "lng": -6.2886,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Córdoba",
+    "lat": 37.8882,
+    "lng": -4.7794,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Donostia",
+    "lat": 43.3183,
+    "lng": -1.9812,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Dos Hermanas",
+    "lat": 37.283,
+    "lng": -5.922,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "El Ejido",
+    "lat": 36.773,
+    "lng": -2.813,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "El Puerto de Santa María",
+    "lat": 36.598,
+    "lng": -6.233,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Elx",
+    "lat": 38.267,
+    "lng": -0.697,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Ferrol",
+    "lat": 43.4833,
+    "lng": -8.2367,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Fuengirola",
+    "lat": 36.541,
+    "lng": -4.62,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Fuenlabrada",
+    "lat": 40.2867,
+    "lng": -3.7954,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Gandia",
+    "lat": 38.968,
+    "lng": -0.184,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Gasteiz",
+    "lat": 42.846,
+    "lng": -2.671,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Getafe",
+    "lat": 40.3083,
+    "lng": -3.7329,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Girona",
+    "lat": 41.9794,
+    "lng": 2.8214,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Granada",
+    "lat": 37.1773,
+    "lng": -3.5986,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Guadalajara",
+    "lat": 40.634,
+    "lng": -3.163,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Huelva",
+    "lat": 37.2614,
+    "lng": -6.9447,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Iruñea",
+    "lat": 42.8125,
+    "lng": -1.6458,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Jaén",
+    "lat": 37.7674,
+    "lng": -3.79,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Jerez de la Frontera",
+    "lat": 36.6865,
+    "lng": -6.1372,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "L'Hospitalet de Llobregat",
+    "lat": 41.364,
+    "lng": 2.1,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Las Palmas",
+    "lat": 28.1235,
+    "lng": -15.4363,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Las Rozas de Madrid",
+    "lat": 40.49,
+    "lng": -3.874,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Leganés",
+    "lat": 40.3272,
+    "lng": -3.7635,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "León",
+    "lat": 42.5987,
+    "lng": -5.5671,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Lleida",
+    "lat": 41.617,
+    "lng": 0.62,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Logroño",
+    "lat": 42.4658,
+    "lng": -2.4499,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Lorca",
+    "lat": 37.674,
+    "lng": -1.701,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Lugo",
+    "lat": 43.012,
+    "lng": -7.556,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Madrid",
+    "lat": 40.4165,
+    "lng": -3.7026,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Manresa",
+    "lat": 41.7238,
+    "lng": 1.8278,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Marbella",
+    "lat": 36.511,
+    "lng": -4.883,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Mataró",
+    "lat": 41.54,
+    "lng": 2.445,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Melilla",
+    "lat": 35.2937,
+    "lng": -2.9383,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Mijas",
+    "lat": 36.594,
+    "lng": -4.639,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Murcia",
+    "lat": 37.9922,
+    "lng": -1.1307,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Málaga",
+    "lat": 36.7213,
+    "lng": -4.4214,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Móstoles",
+    "lat": 40.3223,
+    "lng": -3.8648,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Ourense",
+    "lat": 42.3362,
+    "lng": -7.8636,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Palma",
+    "lat": 39.5696,
+    "lng": 2.6502,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Parla",
+    "lat": 40.239,
+    "lng": -3.771,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Pontevedra",
+    "lat": 42.4309,
+    "lng": -8.6445,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Pozuelo de Alarcón",
+    "lat": 40.437,
+    "lng": -3.822,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Reus",
+    "lat": 41.157,
+    "lng": 1.107,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Rivas-Vaciamadrid",
+    "lat": 40.353,
+    "lng": -3.526,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Roquetas de Mar",
+    "lat": 36.762,
+    "lng": -2.613,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Rubí",
+    "lat": 41.4923,
+    "lng": 2.0321,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Sabadell",
+    "lat": 41.5485,
+    "lng": 2.108,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Salamanca",
+    "lat": 40.9701,
+    "lng": -5.6635,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "San Cristóbal de La Laguna",
+    "lat": 28.487,
+    "lng": -16.314,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "San Fernando",
+    "lat": 36.463,
+    "lng": -6.195,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "San Sebastián de los Reyes",
+    "lat": 40.548,
+    "lng": -3.631,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Sant Boi de Llobregat",
+    "lat": 41.344,
+    "lng": 2.043,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Sant Cugat del Vallès",
+    "lat": 41.472,
+    "lng": 2.083,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Santa Coloma de Gramenet",
+    "lat": 41.452,
+    "lng": 2.215,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Santa Cruz de Tenerife",
+    "lat": 28.4636,
+    "lng": -16.2518,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Santander",
+    "lat": 43.4623,
+    "lng": -3.8099,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Santiago de Compostela",
+    "lat": 42.8805,
+    "lng": -8.5457,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Sevilla",
+    "lat": 37.3891,
+    "lng": -5.9845,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Talavera de la Reina",
+    "lat": 39.961,
+    "lng": -4.832,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Tarragona",
+    "lat": 41.1189,
+    "lng": 1.2445,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Telde",
+    "lat": 28.0,
+    "lng": -15.417,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Terrassa",
+    "lat": 41.5618,
+    "lng": 2.0083,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Toledo",
+    "lat": 39.8568,
+    "lng": -4.0245,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Torrejón de Ardoz",
+    "lat": 40.457,
+    "lng": -3.483,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Torrent",
+    "lat": 39.435,
+    "lng": -0.465,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Torrevieja",
+    "lat": 37.981,
+    "lng": -0.683,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Uviéu",
+    "lat": 43.3619,
+    "lng": -5.8494,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Valladolid",
+    "lat": 41.6523,
+    "lng": -4.7245,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "València",
+    "lat": 39.4699,
+    "lng": -0.3763,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Vigo",
+    "lat": 42.2406,
+    "lng": -8.7207,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Vilanova i la Geltrú",
+    "lat": 41.2239,
+    "lng": 1.7251,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Vitoria-Gasteiz",
+    "lat": 42.8467,
+    "lng": -2.6716,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Vélez-Málaga",
+    "lat": 36.782,
+    "lng": -4.103,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Xixón",
+    "lat": 43.5357,
+    "lng": -5.6615,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  },
+  {
+    "country": "Spain",
+    "city": "Zaragoza",
+    "lat": 41.6488,
+    "lng": -0.8891,
+    "radius": 7000,
+    "regions": [
+      "Northern Mediterranean",
+      "Mediterranean"
+    ]
+  }
+]

@@ -1,0 +1,1683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Puzzlite - Geography Guessing Game</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <style>
+    :root {
+      --bg: #0f172a;
+      --panel: rgba(15, 23, 42, 0.95);
+      --accent: #38bdf8;
+      --accent-2: #818cf8;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --success: #4ade80;
+      --danger: #f87171;
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      overflow: hidden;
+      touch-action: none;
+    }
+
+    #app {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Map fills the screen */
+    #map {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    /* Floating UI panels */
+    .panel {
+      position: absolute;
+      z-index: 1000;
+      background: var(--panel);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Menu */
+    #menu {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: min(90%, 420px);
+      padding: 28px;
+      text-align: center;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    #menu.hidden {
+      opacity: 0;
+      pointer-events: none;
+      transform: translate(-50%, -50%) scale(0.95);
+    }
+
+    h1 {
+      margin: 0 0 6px;
+      font-size: 2rem;
+      font-weight: 800;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .tagline {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 24px;
+    }
+
+    .field {
+      margin-bottom: 18px;
+      text-align: left;
+    }
+
+    label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--muted);
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    select, button {
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text);
+      font-size: 1rem;
+      outline: none;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    select:focus, button:focus {
+      border-color: var(--accent);
+    }
+
+    select option {
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    .mode-options {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .mode-options label.mode-label {
+      flex: 1 1 45%;
+      min-width: 120px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 12px;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      background: rgba(255, 255, 255, 0.05);
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-transform: none;
+      letter-spacing: normal;
+      color: var(--text);
+      transition: background 0.2s, border-color 0.2s;
+    }
+
+    .mode-options input[type="radio"] {
+      accent-color: var(--accent);
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+    }
+
+    .mode-options label.mode-label:hover,
+    .mode-options label.mode-label:has(input:checked) {
+      background: rgba(56, 189, 248, 0.15);
+      border-color: var(--accent);
+    }
+
+    button {
+      margin-top: 8px;
+      font-weight: 700;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(56, 189, 248, 0.3);
+    }
+
+    button:hover {
+      opacity: 0.92;
+    }
+
+    button:active {
+      transform: scale(0.98);
+    }
+
+    button.secondary {
+      background: rgba(255, 255, 255, 0.08);
+      box-shadow: none;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    /* HUD */
+    #hud {
+      top: 12px;
+      left: 12px;
+      right: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 16px;
+      pointer-events: none;
+    }
+
+    #hud .hud-item {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--muted);
+    }
+
+    #hud .hud-value {
+      color: var(--text);
+      font-size: 1.1rem;
+    }
+
+    #hud .menu-btn {
+      pointer-events: auto;
+      width: auto;
+      padding: 8px 14px;
+      margin: 0;
+      font-size: 0.85rem;
+    }
+
+    /* City name badge */
+    #cityLabel {
+      position: absolute;
+      top: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1000;
+      background: var(--panel);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 10px;
+      padding: 8px 20px;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text);
+      text-align: center;
+      white-space: nowrap;
+      pointer-events: none;
+      display: none;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    #cityLabel .city-icon {
+      margin-right: 6px;
+    }
+
+    /* Floating piece */
+    #piece {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      width: 180px;
+      height: 180px;
+      z-index: 1100;
+      border-radius: 12px;
+      border: 2px solid rgba(255, 255, 255, 0.8);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      cursor: grab;
+      touch-action: none;
+      display: none;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+
+    #piece.dragging {
+      cursor: grabbing;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6);
+    }
+
+    #piece::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 12px;
+      box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2);
+      pointer-events: none;
+    }
+
+    /* Crosshair center marker on piece */
+    #piece .crosshair {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 12px;
+      height: 12px;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.9);
+      border: 2px solid rgba(0, 0, 0, 0.4);
+      pointer-events: none;
+    }
+
+    /* Confirm button on the piece */
+    #piece .confirm-btn {
+      position: absolute;
+      bottom: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      border: none;
+      border-radius: 8px;
+      padding: 10px 22px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #fff;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(56, 189, 248, 0.4);
+      pointer-events: auto;
+      white-space: nowrap;
+      display: none;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+
+    #piece .confirm-btn:hover {
+      opacity: 0.92;
+    }
+
+    #piece .confirm-btn:active {
+      transform: translateX(-50%) scale(0.96);
+    }
+
+    /* Feedback panel */
+    #feedback {
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(90%, 360px);
+      padding: 20px;
+      text-align: center;
+      display: none;
+    }
+
+    #feedback .distance {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    #feedback .points {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    #feedback .points.positive { color: var(--success); }
+    #feedback .points.zero { color: var(--danger); }
+
+    /* Summary screen */
+    #summary {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: min(90%, 420px);
+      padding: 32px;
+      text-align: center;
+      display: none;
+    }
+
+    #summary h2 {
+      margin: 0 0 12px;
+      font-size: 1.6rem;
+    }
+
+    #summary .final-score {
+      font-size: 3rem;
+      font-weight: 800;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 24px;
+    }
+
+    #summary .max-score {
+      color: var(--muted);
+      margin-bottom: 24px;
+    }
+
+    /* Loading overlay */
+    #loading {
+      position: absolute;
+      inset: 0;
+      z-index: 2000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg);
+      gap: 16px;
+    }
+
+    .spinner {
+      width: 48px;
+      height: 48px;
+      border: 4px solid rgba(255, 255, 255, 0.1);
+      border-top-color: var(--accent);
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    /* Leaflet attribution readability */
+    .leaflet-control-attribution {
+      background: rgba(15, 23, 42, 0.8) !important;
+      color: var(--muted) !important;
+      font-size: 10px !important;
+    }
+
+    .checkbox-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      max-height: 240px;
+      overflow-y: auto;
+      text-align: left;
+      padding: 10px 12px;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .checkbox-list label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-transform: none;
+      letter-spacing: normal;
+      color: var(--text);
+      cursor: pointer;
+      margin-bottom: 0;
+    }
+
+    .checkbox-list input[type="checkbox"] {
+      accent-color: var(--accent);
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+    }
+
+    .checkbox-toggle {
+      display: flex;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .checkbox-toggle button {
+      flex: 1;
+      padding: 6px 10px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 8px;
+      color: var(--muted);
+      cursor: pointer;
+      box-shadow: none;
+    }
+
+    .checkbox-toggle button:hover {
+      color: var(--text);
+      border-color: var(--accent);
+    }
+
+    #timeLimitField {
+      transition: opacity 0.2s ease;
+    }
+
+    /* Save prompt */
+    #savePrompt {
+      margin-bottom: 16px;
+    }
+
+    #savePrompt .save-text {
+      margin: 0 0 10px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    #playerName {
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text);
+      font-size: 1rem;
+      outline: none;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    #playerName:focus {
+      border-color: var(--accent);
+    }
+
+    #savePrompt button {
+      margin-top: 0;
+    }
+
+    #skipSaveBtn {
+      margin-top: 8px;
+    }
+
+    /* Leaderboard */
+    #leaderboard {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: min(90%, 420px);
+      padding: 28px;
+      text-align: center;
+      display: none;
+    }
+
+    #leaderboard h2 {
+      margin: 0 0 18px;
+      font-size: 1.6rem;
+    }
+
+    #leaderboardList,
+    #globalLeaderboardList {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 20px;
+      max-height: 240px;
+      overflow-y: auto;
+      text-align: left;
+    }
+
+    #leaderboardList li,
+    #globalLeaderboardList li {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 12px;
+      margin-bottom: 6px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.05);
+      font-size: 0.95rem;
+    }
+
+    #leaderboardList li:nth-child(1),
+    #globalLeaderboardList li:nth-child(1) {
+      background: rgba(255, 215, 0, 0.15);
+      border: 1px solid rgba(255, 215, 0, 0.3);
+    }
+
+    #leaderboardList li:nth-child(2),
+    #globalLeaderboardList li:nth-child(2) {
+      background: rgba(192, 192, 192, 0.15);
+      border: 1px solid rgba(192, 192, 192, 0.3);
+    }
+
+    #leaderboardList li:nth-child(3),
+    #globalLeaderboardList li:nth-child(3) {
+      background: rgba(205, 127, 50, 0.15);
+      border: 1px solid rgba(205, 127, 50, 0.3);
+    }
+
+    .lb-rank {
+      font-weight: 700;
+      margin-right: 8px;
+      color: var(--muted);
+    }
+
+    .lb-name {
+      flex: 1;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .lb-score {
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    .lb-empty {
+      text-align: center;
+      color: var(--muted);
+      padding: 16px;
+    }
+
+    #summaryLeaderboardBtn {
+      display: none;
+    }
+
+    /* Mobile adjustments */
+    @media (max-width: 640px) {
+      h1 { font-size: 1.6rem; }
+      #menu { padding: 22px; width: min(92%, 360px); }
+      #piece { width: 140px; height: 140px; }
+      #cityLabel { font-size: 0.85rem; padding: 6px 14px; top: 56px; }
+      #hud .hud-item { font-size: 0.8rem; }
+      #hud .hud-value { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <div id="loading">
+      <div class="spinner"></div>
+      <div>Loading cities...</div>
+    </div>
+
+    <div id="map"></div>
+
+    <div id="hud" class="panel" style="display: none;">
+      <div class="hud-item">Round <span class="hud-value" id="roundDisplay">1</span></div>
+      <div class="hud-item">Score <span class="hud-value" id="scoreDisplay">0</span></div>
+      <div class="hud-item" id="timerDisplay" style="display: none;">Time <span class="hud-value" id="timeValue">0:00</span></div>
+      <button class="secondary menu-btn" id="menuBtn" type="button">Menu</button>
+    </div>
+
+    <div id="cityLabel">
+      <span class="city-icon">📍</span>
+      <span id="cityName"></span>
+    </div>
+
+    <div id="piece">
+      <div class="crosshair"></div>
+      <button class="confirm-btn" id="confirmBtn">✔ Place Here</button>
+    </div>
+
+    <div id="menu" class="panel">
+      <h1>Puzzlite</h1>
+      <div class="tagline">Drop the satellite piece on the right location</div>
+
+      <div class="field">
+        <label>Regions</label>
+        <div id="regionCheckboxes" class="checkbox-list"></div>
+        <div class="checkbox-toggle">
+          <button type="button" id="selectAllRegions">Select all</button>
+          <button type="button" id="deselectAllRegions">Deselect all</button>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Countries</label>
+        <div id="countryCheckboxes" class="checkbox-list"></div>
+        <div class="checkbox-toggle">
+          <button type="button" id="selectAllCountries">Select all</button>
+          <button type="button" id="deselectAllCountries">Deselect all</button>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Game Mode</label>
+        <div class="mode-options">
+          <label class="mode-label">
+            <input type="radio" name="gameMode" value="match" checked />
+            Match (5 Rounds)
+          </label>
+          <label class="mode-label">
+            <input type="radio" name="gameMode" value="infinite" />
+            Infinite
+          </label>
+          <label class="mode-label">
+            <input type="radio" name="gameMode" value="time-trial" />
+            Time Trial
+          </label>
+          <label class="mode-label">
+            <input type="radio" name="gameMode" value="blitz" />
+            Blitz (5 Rounds, 30s)
+          </label>
+        </div>
+      </div>
+
+      <div class="field" id="timeLimitField" style="display: none;">
+        <label for="timeLimitSelect">Time Limit</label>
+        <select id="timeLimitSelect">
+          <option value="1">1 minute</option>
+          <option value="3">3 minutes</option>
+          <option value="5" selected>5 minutes</option>
+          <option value="10">10 minutes</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label class="mode-label" style="flex: 1 1 100%; min-width: auto; justify-content: center;">
+          <input type="checkbox" id="hardModeCheck" />
+          Hard Mode (no pan / zoom)
+        </label>
+      </div>
+
+      <button id="playBtn" type="button">Play</button>
+      <button class="secondary" id="leaderboardMenuBtn" type="button">Leaderboard</button>
+    </div>
+
+    <div id="feedback" class="panel">
+      <div class="distance" id="distanceText"></div>
+      <div class="points" id="pointsText"></div>
+      <button id="nextBtn" type="button">Next Round</button>
+    </div>
+
+    <div id="summary" class="panel">
+      <h2 id="summaryTitle">Match Complete!</h2>
+      <div class="final-score" id="finalScore">0</div>
+      <div class="max-score" id="summarySubtitle">out of 5000 possible points</div>
+
+      <div id="savePrompt">
+        <p class="save-text">Save your score?</p>
+        <input type="text" id="playerName" placeholder="Your name" maxlength="20" />
+        <button id="saveScoreBtn" type="button">Save Score</button>
+        <button class="secondary" id="skipSaveBtn" type="button">Skip</button>
+      </div>
+
+      <div id="leaderboardView" style="display: none;">
+        <h3 id="leaderboardTitle">Leaderboard</h3>
+        <ol id="leaderboardList"></ol>
+      </div>
+
+      <button class="secondary" id="summaryLeaderboardBtn" type="button">View Global Leaderboard</button>
+      <button id="backToMenuBtn" type="button">Back to Menu</button>
+    </div>
+
+    <div id="leaderboard" class="panel">
+      <h2>Leaderboard</h2>
+      <div class="field">
+        <label for="leaderboardModeSelect">Mode</label>
+        <select id="leaderboardModeSelect">
+          <option value="match">Match</option>
+          <option value="infinite">Infinite</option>
+          <option value="time-trial-1">Time Trial (1 min)</option>
+          <option value="time-trial-3">Time Trial (3 min)</option>
+          <option value="time-trial-5" selected>Time Trial (5 min)</option>
+          <option value="time-trial-10">Time Trial (10 min)</option>
+          <option value="blitz">Blitz</option>
+        </select>
+      </div>
+      <div class="field">
+        <label class="mode-label" style="flex: 1 1 100%; min-width: auto; justify-content: center;">
+          <input type="checkbox" id="leaderboardHardModeCheck" />
+          Hard Mode
+        </label>
+      </div>
+      <ol id="globalLeaderboardList"></ol>
+      <button id="leaderboardBackBtn" type="button">Back to Menu</button>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    (function () {
+      'use strict';
+
+      // State
+      let allCities = [];
+      let map = null;
+      let currentCity = null;
+      let gameMode = 'match';
+
+      let round = 1;
+      let score = 0;
+      let completedRounds = 0;
+      let isDragging = false;
+      let dragOffset = { x: 0, y: 0 };
+      let roundMarkers = [];
+      let currentTileCenter = null; // the random point where the satellite crop was taken
+      let timeLeft = 0;
+      let timerInterval = null;
+      let timeLimitMinutes = 5;
+      let isHardMode = false;
+
+      // Leaderboard backend URL (Google Apps Script web app)
+      // Split into parts to make casual scraping slightly harder
+      const LEADERBOARD_URL_PARTS = [
+        'https://script.google.com/macros/s/',
+        'AKfycbw8mvIwBz-BVJIYk8kP2gXWOTpJE3bfv__9k_PFFk25W7EaLRzANFC0n3rGhVlIp3c7Qw',
+        '/exec'
+      ];
+      const LEADERBOARD_URL = LEADERBOARD_URL_PARTS.join('');
+      let currentBoardMode = 'match';
+      let gameStartTime = 0;
+
+      // DOM refs
+      const loadingEl = document.getElementById('loading');
+      const menuEl = document.getElementById('menu');
+      const hudEl = document.getElementById('hud');
+      const feedbackEl = document.getElementById('feedback');
+      const summaryEl = document.getElementById('summary');
+      const regionCheckboxes = document.getElementById('regionCheckboxes');
+      const countryCheckboxes = document.getElementById('countryCheckboxes');
+      const playBtn = document.getElementById('playBtn');
+      const nextBtn = document.getElementById('nextBtn');
+      const menuBtn = document.getElementById('menuBtn');
+      const backToMenuBtn = document.getElementById('backToMenuBtn');
+      const piece = document.getElementById('piece');
+      const confirmBtn = document.getElementById('confirmBtn');
+      const roundDisplay = document.getElementById('roundDisplay');
+      const scoreDisplay = document.getElementById('scoreDisplay');
+      const distanceText = document.getElementById('distanceText');
+      const pointsText = document.getElementById('pointsText');
+      const cityLabel = document.getElementById('cityLabel');
+      const cityName = document.getElementById('cityName');
+      const timeLimitField = document.getElementById('timeLimitField');
+      const timeLimitSelect = document.getElementById('timeLimitSelect');
+      const timerDisplay = document.getElementById('timerDisplay');
+      const timeValue = document.getElementById('timeValue');
+      const summaryTitle = document.getElementById('summaryTitle');
+      const summarySubtitle = document.getElementById('summarySubtitle');
+      const modeRadios = document.querySelectorAll('input[name="gameMode"]');
+      const savePrompt = document.getElementById('savePrompt');
+      const playerName = document.getElementById('playerName');
+      const saveScoreBtn = document.getElementById('saveScoreBtn');
+      const skipSaveBtn = document.getElementById('skipSaveBtn');
+      const summaryLeaderboardBtn = document.getElementById('summaryLeaderboardBtn');
+      const leaderboardView = document.getElementById('leaderboardView');
+      const leaderboardEl = document.getElementById('leaderboard');
+      const leaderboardList = document.getElementById('leaderboardList');
+      const globalLeaderboardList = document.getElementById('globalLeaderboardList');
+      const leaderboardModeSelect = document.getElementById('leaderboardModeSelect');
+      const leaderboardHardModeCheck = document.getElementById('leaderboardHardModeCheck');
+      const hardModeCheck = document.getElementById('hardModeCheck');
+      const leaderboardMenuBtn = document.getElementById('leaderboardMenuBtn');
+      const leaderboardBackBtn = document.getElementById('leaderboardBackBtn');
+
+      // Haversine distance in meters
+      function haversine(lat1, lng1, lat2, lng2) {
+        const R = 6371000;
+        const toRad = Math.PI / 180;
+        const dLat = (lat2 - lat1) * toRad;
+        const dLng = (lng2 - lng1) * toRad;
+        const a = Math.sin(dLat / 2) ** 2 +
+                  Math.cos(lat1 * toRad) * Math.cos(lat2 * toRad) * Math.sin(dLng / 2) ** 2;
+        const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+        return R * c;
+      }
+
+      // Convert lat/lng to tile x/y at a given zoom
+      function latLngToTile(lat, lng, zoom) {
+        const n = Math.pow(2, zoom);
+        const x = ((lng + 180) / 360) * n;
+        const latRad = (lat * Math.PI) / 180;
+        const y = ((1 - Math.log(Math.tan(latRad) + 1 / Math.cos(latRad)) / Math.PI) / 2) * n;
+        return { x, y };
+      }
+
+      // Load a tile image with CORS
+      function loadTileImage(url) {
+        return new Promise((resolve, reject) => {
+          const img = new Image();
+          img.crossOrigin = 'anonymous';
+          img.onload = () => resolve(img);
+          img.onerror = () => reject(new Error('Failed to load tile'));
+          img.src = url;
+        });
+      }
+
+      // Generate a random lat/lng point within a given radius from center
+      function getRandomPointInRadius(lat, lng, radiusMeters) {
+        const angle = Math.random() * 2 * Math.PI;
+        // sqrt for uniform distribution over the area (not biased toward center)
+        const distance = Math.sqrt(Math.random()) * radiusMeters;
+        const dLat = (distance * Math.cos(angle)) / 111320;
+        const dLng = (distance * Math.sin(angle)) / (111320 * Math.cos(lat * Math.PI / 180));
+        return { lat: lat + dLat, lng: lng + dLng };
+      }
+
+      // Check whether a lat/lng point is inside the map bounds with a padding in meters
+      function isPointInBoundsWithPadding(lat, lng, bounds, paddingMeters) {
+        const southWest = bounds.getSouthWest();
+        const northEast = bounds.getNorthEast();
+        const latPadding = paddingMeters / 111320;
+        const lngPadding = paddingMeters / (111320 * Math.cos(lat * Math.PI / 180));
+        return (
+          lat >= southWest.lat + latPadding &&
+          lat <= northEast.lat - latPadding &&
+          lng >= southWest.lng + lngPadding &&
+          lng <= northEast.lng - lngPadding
+        );
+      }
+
+      // Capture and crop a satellite area at zoom 18.
+      // cropSizeMeters controls the real-world area to cover (e.g. 500 = 500×500 m).
+      // The pixel crop size is calculated dynamically from latitude so it's consistent.
+      async function captureSatelliteCrop(lat, lng, cropSizeMeters) {
+        const zoom = 18;
+        const tileSize = 256;
+        // Ground resolution at zoom 18: (cos(lat) * 2πR) / (256 * 2^18)
+        const resolution = (Math.cos(lat * Math.PI / 180) * 40075016.686) / 67108864;
+        const cropSize = Math.round(cropSizeMeters / resolution);
+        const { x: tileX, y: tileY } = latLngToTile(lat, lng, zoom);
+        const baseTileX = Math.floor(tileX);
+        const baseTileY = Math.floor(tileY);
+        const offsetX = (tileX - baseTileX) * tileSize;
+        const offsetY = (tileY - baseTileY) * tileSize;
+        const cropLeft = offsetX - cropSize / 2;
+        const cropTop = offsetY - cropSize / 2;
+        const minTileX = baseTileX + Math.floor(cropLeft / tileSize);
+        const maxTileX = baseTileX + Math.floor((cropLeft + cropSize - 1) / tileSize);
+        const minTileY = baseTileY + Math.floor(cropTop / tileSize);
+        const maxTileY = baseTileY + Math.floor((cropTop + cropSize - 1) / tileSize);
+
+        const tilePromises = [];
+        for (let ty = minTileY; ty <= maxTileY; ty++) {
+          for (let tx = minTileX; tx <= maxTileX; tx++) {
+            const url = `https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/${zoom}/${ty}/${tx}`;
+            tilePromises.push(loadTileImage(url).then(img => ({ img, tx, ty })));
+          }
+        }
+        const tiles = await Promise.all(tilePromises);
+
+        const canvasWidth = (maxTileX - minTileX + 1) * tileSize;
+        const canvasHeight = (maxTileY - minTileY + 1) * tileSize;
+        const composite = document.createElement('canvas');
+        composite.width = canvasWidth;
+        composite.height = canvasHeight;
+        const ctx = composite.getContext('2d');
+        tiles.forEach(({ img, tx, ty }) => {
+          ctx.drawImage(img, (tx - minTileX) * tileSize, (ty - minTileY) * tileSize, tileSize, tileSize);
+        });
+
+        const cropCanvas = document.createElement('canvas');
+        cropCanvas.width = cropSize;
+        cropCanvas.height = cropSize;
+        const cropCtx = cropCanvas.getContext('2d');
+        const cropStartX = (baseTileX - minTileX) * tileSize + offsetX - cropSize / 2;
+        const cropStartY = (baseTileY - minTileY) * tileSize + offsetY - cropSize / 2;
+        cropCtx.drawImage(composite, cropStartX, cropStartY, cropSize, cropSize, 0, 0, cropSize, cropSize);
+        return cropCanvas.toDataURL('image/png');
+      }
+
+      // Initialize map
+      function initMap() {
+        if (map) return;
+        map = L.map('map', {
+          zoomControl: false,
+          attributionControl: true,
+          minZoom: 3,
+          maxZoom: 19
+        }).setView([42.0, 12.0], 14);
+
+        L.tileLayer('https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+          attribution: 'Tiles &copy; Esri',
+          maxZoom: 19
+        }).addTo(map);
+        L.control.zoom({ position: 'bottomright' }).addTo(map);
+      }
+
+      // Populate region checkboxes
+      function populateRegions() {
+        const regions = new Set();
+        allCities.forEach(city => {
+          city.regions.forEach(region => regions.add(region));
+        });
+        const sorted = Array.from(regions).sort();
+        regionCheckboxes.innerHTML = '';
+        sorted.forEach(region => {
+          const label = document.createElement('label');
+          const checkbox = document.createElement('input');
+          checkbox.type = 'checkbox';
+          checkbox.value = region;
+          checkbox.checked = true;
+          label.appendChild(checkbox);
+          label.appendChild(document.createTextNode(region));
+          regionCheckboxes.appendChild(label);
+        });
+      }
+
+      // Toggle all checkboxes in a container
+      function setAllCheckboxes(container, checked) {
+        container.querySelectorAll('input[type="checkbox"]').forEach(cb => {
+          if (cb.checked !== checked) {
+            cb.checked = checked;
+            cb.dispatchEvent(new Event('change', { bubbles: true }));
+          }
+        });
+      }
+
+      // Populate country checkboxes based on selected regions
+      function populateCountries() {
+        const selectedRegions = Array.from(regionCheckboxes.querySelectorAll('input:checked')).map(cb => cb.value);
+        const countries = new Set();
+        allCities.forEach(city => {
+          if (selectedRegions.length === 0 || city.regions.some(r => selectedRegions.includes(r))) {
+            countries.add(city.country);
+          }
+        });
+        const sorted = Array.from(countries).sort();
+        const previous = Array.from(countryCheckboxes.querySelectorAll('input:checked')).map(cb => cb.value);
+        countryCheckboxes.innerHTML = '';
+        sorted.forEach(country => {
+          const label = document.createElement('label');
+          const checkbox = document.createElement('input');
+          checkbox.type = 'checkbox';
+          checkbox.value = country;
+          checkbox.checked = previous.includes(country) || previous.length === 0;
+          label.appendChild(checkbox);
+          label.appendChild(document.createTextNode(country));
+          countryCheckboxes.appendChild(label);
+        });
+      }
+
+      // Filter cities based on current selections
+      function getFilteredCities() {
+        const selectedRegions = Array.from(regionCheckboxes.querySelectorAll('input:checked')).map(cb => cb.value);
+        const selectedCountries = Array.from(countryCheckboxes.querySelectorAll('input:checked')).map(cb => cb.value);
+        return allCities.filter(city => {
+          const regionMatch = selectedRegions.length === 0 || city.regions.some(r => selectedRegions.includes(r));
+          const countryMatch = selectedCountries.length === 0 || selectedCountries.includes(city.country);
+          return regionMatch && countryMatch;
+        });
+      }
+
+      // Pick a random city from filtered list
+      function pickRandomCity() {
+        const filtered = getFilteredCities();
+        if (filtered.length === 0) return null;
+        return filtered[Math.floor(Math.random() * filtered.length)];
+      }
+
+      // Update HUD
+      function updateHUD() {
+        roundDisplay.textContent = (gameMode === 'match' || gameMode === 'blitz') ? `${round} / 5` : round;
+        scoreDisplay.textContent = score;
+        if (gameMode === 'time-trial' || gameMode === 'blitz') {
+          timerDisplay.style.display = 'block';
+          const minutes = Math.floor(timeLeft / 60);
+          const seconds = timeLeft % 60;
+          timeValue.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+        } else {
+          timerDisplay.style.display = 'none';
+        }
+      }
+
+      // Start a round
+      async function startRound() {
+        clearMarkers();
+        feedbackEl.style.display = 'none';
+        piece.style.display = 'none';
+        confirmBtn.style.display = 'none';
+        cityLabel.style.display = 'none';
+
+        currentCity = pickRandomCity();
+        if (!currentCity) {
+          alert('No cities match the selected filters.');
+          showMenu();
+          return;
+        }
+
+        // Show city name
+        cityName.textContent = `${currentCity.city}, ${currentCity.country}`;
+        cityLabel.style.display = 'block';
+
+        map.setView([currentCity.lat, currentCity.lng], 14, { animate: false });
+        // Lock minimum zoom to the initial level so the user can't zoom out beyond the first sight
+        map.setMinZoom(14);
+
+        loadingEl.innerHTML = '<div class="spinner"></div><div>Loading satellite image...</div>';
+        loadingEl.style.display = 'flex';
+
+        try {
+          // Pick a random point within the city so the satellite piece isn't always the city center.
+          // Keep regenerating until the point lies inside the currently visible map area so the
+          // player can always see where the satellite image was taken.
+          const bounds = map.getBounds();
+          let attempts = 0;
+          let found = false;
+          do {
+            currentTileCenter = getRandomPointInRadius(currentCity.lat, currentCity.lng, currentCity.radius || 7000);
+            found = isPointInBoundsWithPadding(currentTileCenter.lat, currentTileCenter.lng, bounds, 500);
+            attempts++;
+          } while (!found && attempts < 50);
+          // Guarantee the point is always visible: fall back to the city center if needed.
+          if (!found) {
+            currentTileCenter = { lat: currentCity.lat, lng: currentCity.lng };
+          }
+          const dataUrl = await captureSatelliteCrop(currentTileCenter.lat, currentTileCenter.lng, 500);
+          piece.style.backgroundImage = `url(${dataUrl})`;
+          piece.style.display = 'block';
+          resetPiecePosition();
+          // Start the per-round timer for Blitz mode
+          if (gameMode === 'blitz') {
+            timeLeft = 30;
+            updateHUD();
+            startTimer(() => {
+              if (piece.style.display !== 'none') {
+                isDragging = false;
+                piece.classList.remove('dragging');
+                if (map && map.dragging && !isHardMode) map.dragging.enable();
+                confirmBtn.style.display = 'none';
+                cityLabel.style.display = 'none';
+                handleDrop();
+              }
+            });
+          }
+        } catch (err) {
+          console.error('Failed to load satellite crop:', err);
+          alert('Could not load satellite imagery. Please try again.');
+        } finally {
+          loadingEl.style.display = 'none';
+          loadingEl.innerHTML = '<div class="spinner"></div><div>Loading cities...</div>';
+        }
+      }
+
+      // Reset piece to top-right corner
+      function resetPiecePosition() {
+        piece.style.top = '12px';
+        piece.style.right = '12px';
+        piece.style.left = 'auto';
+        piece.style.bottom = 'auto';
+      }
+
+      // Clear markers
+      function clearMarkers() {
+        roundMarkers.forEach(m => map.removeLayer(m));
+        roundMarkers = [];
+      }
+
+      // Calculate score from distance:
+      // 1000 points at 50 m or less, linearly decreasing to 0 points at 3000 m.
+      function calculatePoints(distance) {
+        if (distance <= 50) return 1000;
+        if (distance >= 3000) return 0;
+        return Math.round(1000 * (3000 - distance) / (3000 - 50));
+      }
+
+      // Handle confirmation (user clicks "Place Here")
+      function confirmPlacement() {
+        if (!currentCity || !map || !currentTileCenter) return;
+        confirmBtn.style.display = 'none';
+        cityLabel.style.display = 'none';
+        handleDrop();
+      }
+
+      // Handle drop & score
+      function handleDrop() {
+        if (!currentCity || !map || !currentTileCenter) return;
+        stopTimer();
+
+        const rect = piece.getBoundingClientRect();
+        const centerX = rect.left + rect.width / 2;
+        const centerY = rect.top + rect.height / 2;
+        const containerPoint = L.point(centerX, centerY);
+        const dropLatLng = map.containerPointToLatLng(containerPoint);
+
+        // Distance is measured from the RANDOM tile center (where the satellite image came from)
+        const distance = haversine(currentTileCenter.lat, currentTileCenter.lng, dropLatLng.lat, dropLatLng.lng);
+        const points = calculatePoints(distance);
+        score += points;
+        completedRounds++;
+
+        // Markers: blue = the actual random point (correct answer), red = where user dropped
+        const blueMarker = L.marker([currentTileCenter.lat, currentTileCenter.lng], {
+          icon: L.divIcon({
+            className: 'custom-marker',
+            html: '<div style="width:14px;height:14px;background:#3b82f6;border:2px solid #fff;border-radius:50%;box-shadow:0 2px 6px rgba(0,0,0,0.4);"></div>',
+            iconSize: [14, 14],
+            iconAnchor: [7, 7]
+          })
+        }).addTo(map);
+        const redMarker = L.marker([dropLatLng.lat, dropLatLng.lng], {
+          icon: L.divIcon({
+            className: 'custom-marker',
+            html: '<div style="width:14px;height:14px;background:#ef4444;border:2px solid #fff;border-radius:50%;box-shadow:0 2px 6px rgba(0,0,0,0.4);"></div>',
+            iconSize: [14, 14],
+            iconAnchor: [7, 7]
+          })
+        }).addTo(map);
+        // Draw a line connecting the user's guess to the correct location
+        const resultLine = L.polyline(
+          [
+            [dropLatLng.lat, dropLatLng.lng],
+            [currentTileCenter.lat, currentTileCenter.lng]
+          ],
+          {
+            color: '#ffffff',
+            weight: 3,
+            opacity: 0.9,
+            dashArray: '8, 8',
+            lineCap: 'round',
+            lineJoin: 'round'
+          }
+        ).addTo(map);
+        roundMarkers.push(blueMarker, redMarker, resultLine);
+
+        // Hide piece and show feedback
+        piece.style.display = 'none';
+        feedbackEl.style.display = 'block';
+        distanceText.textContent = `${Math.round(distance)}m away`;
+        pointsText.textContent = points > 0 ? `+${points} points` : '0 points';
+        pointsText.className = 'points ' + (points > 0 ? 'positive' : 'zero');
+        updateHUD();
+      }
+
+      // Drag handlers
+      function onDragStart(clientX, clientY) {
+        if (!currentCity) return;
+        isDragging = true;
+        confirmBtn.style.display = 'none';
+        const rect = piece.getBoundingClientRect();
+        dragOffset.x = clientX - rect.left;
+        dragOffset.y = clientY - rect.top;
+        piece.classList.add('dragging');
+        if (map && map.dragging) map.dragging.disable();
+      }
+
+      function onDragMove(clientX, clientY) {
+        if (!isDragging) return;
+        const x = clientX - dragOffset.x;
+        const y = clientY - dragOffset.y;
+        piece.style.left = `${x}px`;
+        piece.style.top = `${y}px`;
+        piece.style.right = 'auto';
+      }
+
+      function onDragEnd() {
+        if (!isDragging) return;
+        isDragging = false;
+        piece.classList.remove('dragging');
+        // Only re-enable map dragging if not in hard mode
+        if (map && map.dragging && !isHardMode) map.dragging.enable();
+        // Show confirm button so user can finalize placement
+        confirmBtn.style.display = 'block';
+      }
+
+      // Mouse events
+      piece.addEventListener('mousedown', e => {
+        // Don't start drag if clicking confirm button
+        if (e.target === confirmBtn) return;
+        e.preventDefault();
+        onDragStart(e.clientX, e.clientY);
+      });
+
+      window.addEventListener('mousemove', e => {
+        onDragMove(e.clientX, e.clientY);
+      });
+
+      window.addEventListener('mouseup', () => {
+        onDragEnd();
+      });
+
+      // Touch events
+      piece.addEventListener('touchstart', e => {
+        if (e.target === confirmBtn) return;
+        e.preventDefault();
+        const touch = e.touches[0];
+        onDragStart(touch.clientX, touch.clientY);
+      }, { passive: false });
+
+      window.addEventListener('touchmove', e => {
+        if (!isDragging) return;
+        e.preventDefault();
+        const touch = e.touches[0];
+        onDragMove(touch.clientX, touch.clientY);
+      }, { passive: false });
+
+      window.addEventListener('touchend', () => {
+        onDragEnd();
+      });
+
+      // Confirm button
+      confirmBtn.addEventListener('mousedown', e => e.stopPropagation());
+      confirmBtn.addEventListener('touchstart', e => e.stopPropagation(), { passive: true });
+      confirmBtn.addEventListener('click', confirmPlacement);
+
+      // Next round
+      function nextRound() {
+        if ((gameMode === 'match' || gameMode === 'blitz') && round >= 5) {
+          showSummary();
+          return;
+        }
+        round++;
+        updateHUD();
+        startRound();
+      }
+
+      // Show summary
+      function showSummary() {
+        stopTimer();
+        loadingEl.style.display = 'none';
+        feedbackEl.style.display = 'none';
+        hudEl.style.display = 'none';
+        piece.style.display = 'none';
+        cityLabel.style.display = 'none';
+        summaryEl.style.display = 'block';
+        document.getElementById('finalScore').textContent = score;
+
+        if (gameMode === 'match' || gameMode === 'blitz') {
+          summaryTitle.textContent = gameMode === 'blitz' ? 'Blitz Complete!' : 'Match Complete!';
+          summarySubtitle.textContent = 'out of 5000 possible points';
+        } else if (gameMode === 'time-trial') {
+          summaryTitle.textContent = "Time's Up!";
+          summarySubtitle.textContent = `${completedRounds} rounds completed`;
+        } else {
+          summaryTitle.textContent = 'Game Over';
+          summarySubtitle.textContent = `${completedRounds} rounds completed`;
+        }
+
+        // Reset save prompt
+        savePrompt.style.display = 'block';
+        playerName.value = '';
+        leaderboardView.style.display = 'none';
+        summaryLeaderboardBtn.style.display = 'none';
+      }
+
+      // Show menu
+      function showMenu() {
+        menuEl.classList.remove('hidden');
+        hudEl.style.display = 'none';
+        feedbackEl.style.display = 'none';
+        summaryEl.style.display = 'none';
+        leaderboardEl.style.display = 'none';
+        piece.style.display = 'none';
+        cityLabel.style.display = 'none';
+        clearMarkers();
+        stopTimer();
+        if (map) {
+          map.setMinZoom(3);
+          setMapInteraction(true);
+        }
+      }
+
+      // Timer helpers for time-trial and blitz modes
+      function startTimer(onTimeout) {
+        stopTimer();
+        timerInterval = setInterval(() => {
+          timeLeft--;
+          updateHUD();
+          if (timeLeft <= 0) {
+            stopTimer();
+            if (onTimeout) onTimeout();
+          }
+        }, 1000);
+      }
+
+      function stopTimer() {
+        if (timerInterval) {
+          clearInterval(timerInterval);
+          timerInterval = null;
+        }
+      }
+
+      // Leaderboard helpers
+      function getBoardMode() {
+        const baseMode = gameMode === 'time-trial' ? `time-trial-${timeLimitMinutes}` : gameMode;
+        const hard = isHardMode ? 'hard' : 'normal';
+        return `${baseMode}|${hard}`;
+      }
+
+      function buildLeaderboardKeyFromInputs() {
+        const mode = leaderboardModeSelect.value;
+        const hard = leaderboardHardModeCheck.checked ? 'hard' : 'normal';
+        return `${mode}|${hard}`;
+      }
+
+      // Frontend-only leaderboard protections
+      const FORBIDDEN_WORDS = ['badword']; // extend as needed
+      const MIN_SECONDS_PER_ROUND = 3;
+      const SUBMISSION_COOLDOWN_MS = 60000;
+
+      function sanitiseName(name) {
+        return name
+          // Strip control characters and directional markers, keep all other characters
+          .replace(/[\x00-\x1F\x7F-\x9F\u200B-\u200F\uFEFF]/g, '')
+          .replace(/\s+/g, ' ')
+          .trim()
+          .slice(0, 20);
+      }
+
+      function isNameValid(name) {
+        if (!name || name.length === 0) return false;
+        const lower = name.toLowerCase();
+        return !FORBIDDEN_WORDS.some(word => lower.includes(word));
+      }
+
+      function getMaxScoreForMode(mode, rounds) {
+        if (mode === 'match' || mode === 'blitz') return 5000;
+        if (mode === 'time-trial') return rounds * 1000;
+        return rounds * 1000;
+      }
+
+      function validateSubmission(name, mode, submittedScore, rounds) {
+        const errors = [];
+        const maxScore = getMaxScoreForMode(mode, rounds);
+
+        if (submittedScore < 0 || submittedScore > maxScore) {
+          errors.push(`Score must be between 0 and ${maxScore}.`);
+        }
+
+        if ((mode === 'match' || mode === 'blitz') && rounds !== 5) {
+          errors.push('Match and Blitz modes require exactly 5 rounds.');
+        }
+
+        if (mode === 'time-trial' && rounds < 1) {
+          errors.push('Time Trial requires at least 1 completed round.');
+        }
+
+        const elapsedSeconds = (Date.now() - gameStartTime) / 1000;
+        const minSeconds = Math.max(rounds * MIN_SECONDS_PER_ROUND, 5);
+        if (elapsedSeconds < minSeconds) {
+          errors.push(`Game completed too quickly. Minimum time: ${minSeconds}s.`);
+        }
+
+        if (!isNameValid(name)) {
+          errors.push('Name contains invalid characters or words.');
+        }
+
+        return errors;
+      }
+
+      function checkRateLimit() {
+        const lastSubmission = localStorage.getItem('puzzlite_last_submission');
+        if (lastSubmission) {
+          const lastTime = parseInt(lastSubmission, 10);
+          if (Date.now() - lastTime < SUBMISSION_COOLDOWN_MS) {
+            const waitSeconds = Math.ceil((SUBMISSION_COOLDOWN_MS - (Date.now() - lastTime)) / 1000);
+            return `Please wait ${waitSeconds} seconds before submitting another score.`;
+          }
+        }
+        return null;
+      }
+
+      function recordSubmission(name, mode, score) {
+        localStorage.setItem('puzzlite_last_submission', Date.now().toString());
+        localStorage.setItem('puzzlite_last_signature', `${name}|${score}|${mode}`);
+      }
+
+      function isDuplicateSubmission(name, mode, score) {
+        const lastSignature = localStorage.getItem('puzzlite_last_signature');
+        return lastSignature === `${name}|${score}|${mode}`;
+      }
+
+      async function saveScore(name, mode, score, rounds) {
+        if (!LEADERBOARD_URL || LEADERBOARD_URL.includes('YOUR_GOOGLE_APPS_SCRIPT')) {
+          alert('Leaderboard is not configured yet. Please set LEADERBOARD_URL in the code.');
+          return;
+        }
+        const payload = {
+          name: name || 'Anonymous',
+          mode: mode,
+          score: score,
+          rounds: rounds
+        };
+        const res = await fetch(LEADERBOARD_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify(payload)
+        });
+        if (!res.ok) throw new Error('Failed to save score');
+      }
+
+      async function loadLeaderboard(mode) {
+        if (!LEADERBOARD_URL || LEADERBOARD_URL.includes('YOUR_GOOGLE_APPS_SCRIPT')) {
+          return [];
+        }
+        const res = await fetch(`${LEADERBOARD_URL}?mode=${encodeURIComponent(mode)}`);
+        if (!res.ok) throw new Error('Failed to load leaderboard');
+        const data = await res.json();
+        return data.leaderboard || [];
+      }
+
+      function renderLeaderboard(listEl, entries) {
+        listEl.innerHTML = '';
+        if (!entries || entries.length === 0) {
+          listEl.innerHTML = '<li class="lb-empty">No scores yet</li>';
+          return;
+        }
+        entries.forEach((entry, index) => {
+          const li = document.createElement('li');
+          li.innerHTML = `<span class="lb-rank">#${index + 1}</span><span class="lb-name">${escapeHtml(entry.name)}</span><span class="lb-score">${entry.score}</span>`;
+          listEl.appendChild(li);
+        });
+      }
+
+      function escapeHtml(str) {
+        const div = document.createElement('div');
+        div.textContent = str;
+        return div.innerHTML;
+      }
+
+      async function showLeaderboard() {
+        menuEl.classList.add('hidden');
+        summaryEl.style.display = 'none';
+        leaderboardEl.style.display = 'block';
+        globalLeaderboardList.innerHTML = '<li class="lb-empty">Loading...</li>';
+        await refreshGlobalLeaderboard();
+      }
+
+      async function refreshGlobalLeaderboard() {
+        const mode = buildLeaderboardKeyFromInputs();
+        currentBoardMode = mode;
+        globalLeaderboardList.innerHTML = '<li class="lb-empty">Loading...</li>';
+        try {
+          const entries = await loadLeaderboard(mode);
+          renderLeaderboard(globalLeaderboardList, entries);
+        } catch (err) {
+          console.error(err);
+          globalLeaderboardList.innerHTML = '<li class="lb-empty">Could not load leaderboard</li>';
+        }
+      }
+
+      function hideLeaderboard() {
+        leaderboardEl.style.display = 'none';
+      }
+
+      // Start game
+      async function startGame() {
+        gameStartTime = Date.now();
+        gameMode = document.querySelector('input[name="gameMode"]:checked').value;
+        isHardMode = hardModeCheck.checked;
+        round = 1;
+        score = 0;
+        completedRounds = 0;
+        timeLimitMinutes = parseInt(timeLimitSelect.value, 10);
+        timeLeft = timeLimitMinutes * 60;
+
+        if (getFilteredCities().length === 0) {
+          alert('No cities match the selected filters. Please change your selection.');
+          return;
+        }
+
+        menuEl.classList.add('hidden');
+        summaryEl.style.display = 'none';
+        hudEl.style.display = 'flex';
+        updateHUD();
+        initMap();
+        setMapInteraction(!isHardMode);
+        await startRound();
+        if (gameMode === 'time-trial') {
+          startTimer(showSummary);
+        }
+      }
+
+      // Enable or disable all map interactions (used for hard mode)
+      function setMapInteraction(enabled) {
+        if (!map) return;
+        if (enabled) {
+          map.dragging.enable();
+          map.touchZoom.enable();
+          map.doubleClickZoom.enable();
+          map.scrollWheelZoom.enable();
+          map.boxZoom.enable();
+          map.keyboard.enable();
+        } else {
+          map.dragging.disable();
+          map.touchZoom.disable();
+          map.doubleClickZoom.disable();
+          map.scrollWheelZoom.disable();
+          map.boxZoom.disable();
+          map.keyboard.disable();
+        }
+      }
+
+      // Event listeners
+      regionCheckboxes.addEventListener('change', populateCountries);
+      document.getElementById('selectAllRegions').addEventListener('click', () => setAllCheckboxes(regionCheckboxes, true));
+      document.getElementById('deselectAllRegions').addEventListener('click', () => setAllCheckboxes(regionCheckboxes, false));
+      document.getElementById('selectAllCountries').addEventListener('click', () => setAllCheckboxes(countryCheckboxes, true));
+      document.getElementById('deselectAllCountries').addEventListener('click', () => setAllCheckboxes(countryCheckboxes, false));
+      modeRadios.forEach(radio => {
+        radio.addEventListener('change', () => {
+          const mode = document.querySelector('input[name="gameMode"]:checked').value;
+          timeLimitField.style.display = mode === 'time-trial' ? 'block' : 'none';
+        });
+      });
+      playBtn.addEventListener('click', startGame);
+      nextBtn.addEventListener('click', nextRound);
+      menuBtn.addEventListener('click', () => {
+        if (confirm('Are you sure you want to return to the menu? Your current progress will be lost.')) {
+          showMenu();
+        }
+      });
+      backToMenuBtn.addEventListener('click', showMenu);
+
+      // Leaderboard event listeners
+      saveScoreBtn.addEventListener('click', async () => {
+        const rawName = playerName.value.trim();
+        const name = sanitiseName(rawName) || 'Anonymous';
+        const mode = getBoardMode();
+        const rounds = (gameMode === 'match' || gameMode === 'blitz') ? 5 : completedRounds;
+
+        const validationErrors = validateSubmission(name, mode, score, rounds);
+        if (validationErrors.length > 0) {
+          alert('Score rejected: ' + validationErrors.join(' '));
+          return;
+        }
+
+        const rateLimitError = checkRateLimit();
+        if (rateLimitError) {
+          alert(rateLimitError);
+          return;
+        }
+
+        if (isDuplicateSubmission(name, mode, score)) {
+          alert('This exact score was already submitted.');
+          return;
+        }
+
+        saveScoreBtn.disabled = true;
+        saveScoreBtn.textContent = 'Saving...';
+        try {
+          await saveScore(name, mode, score, rounds);
+          recordSubmission(name, mode, score);
+          savePrompt.style.display = 'none';
+          summaryLeaderboardBtn.style.display = 'block';
+          const entries = await loadLeaderboard(mode);
+          renderLeaderboard(leaderboardList, entries);
+          leaderboardView.style.display = 'block';
+        } catch (err) {
+          console.error(err);
+          alert('Could not save score. Please try again.');
+        } finally {
+          saveScoreBtn.disabled = false;
+          saveScoreBtn.textContent = 'Save Score';
+        }
+      });
+
+      skipSaveBtn.addEventListener('click', async () => {
+        savePrompt.style.display = 'none';
+        summaryLeaderboardBtn.style.display = 'block';
+        const mode = getBoardMode();
+        try {
+          const entries = await loadLeaderboard(mode);
+          renderLeaderboard(leaderboardList, entries);
+          leaderboardView.style.display = 'block';
+        } catch (err) {
+          console.error(err);
+        }
+      });
+
+      summaryLeaderboardBtn.addEventListener('click', () => {
+        const mode = gameMode === 'time-trial' ? `time-trial-${timeLimitMinutes}` : gameMode;
+        leaderboardModeSelect.value = mode;
+        leaderboardHardModeCheck.checked = isHardMode;
+        showLeaderboard();
+      });
+
+      leaderboardMenuBtn.addEventListener('click', () => {
+        const mode = document.querySelector('input[name="gameMode"]:checked').value;
+        const boardMode = mode === 'time-trial' ? `time-trial-${timeLimitSelect.value}` : mode;
+        leaderboardModeSelect.value = boardMode;
+        leaderboardHardModeCheck.checked = hardModeCheck.checked;
+        showLeaderboard();
+      });
+
+      leaderboardBackBtn.addEventListener('click', () => {
+        hideLeaderboard();
+        showMenu();
+      });
+
+      leaderboardHardModeCheck.addEventListener('change', () => {
+        refreshGlobalLeaderboard();
+      });
+
+      leaderboardModeSelect.addEventListener('change', () => {
+        refreshGlobalLeaderboard();
+      });
+
+      // Load cities
+      async function loadCities() {
+        try {
+          const response = await fetch('cities.json');
+          if (!response.ok) throw new Error('Failed to fetch cities.json');
+          allCities = await response.json();
+          populateRegions();
+          populateCountries();
+          loadingEl.style.display = 'none';
+        } catch (err) {
+          console.error(err);
+          loadingEl.innerHTML = '<div>Error loading cities. Please refresh.</div>';
+        }
+      }
+
+      loadCities();
+    })();
+  </script>
+</body>
+</html>
