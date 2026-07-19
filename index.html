@@ -607,6 +607,120 @@
       #hud .hud-item { font-size: 0.8rem; }
       #hud .hud-value { font-size: 1rem; }
     }
+
+    /* Multiplier badge */
+    .multiplier-badge {
+      display: inline-block;
+      margin-left: 6px;
+      padding: 2px 6px;
+      border-radius: 6px;
+      background: rgba(56, 189, 248, 0.2);
+      color: var(--accent);
+      font-size: 0.75rem;
+      font-weight: 700;
+      vertical-align: middle;
+    }
+
+    /* Progress bar */
+    #progressBarContainer {
+      position: absolute;
+      top: 68px;
+      left: 12px;
+      right: 12px;
+      z-index: 1000;
+      display: flex;
+      gap: 4px;
+      pointer-events: none;
+    }
+
+    #progressBarContainer .progress-segment {
+      flex: 1;
+      height: 4px;
+      border-radius: 2px;
+      background: rgba(255, 255, 255, 0.1);
+      transition: background 0.3s ease;
+    }
+
+    #progressBarContainer .progress-segment.active {
+      background: var(--accent);
+      box-shadow: 0 0 8px var(--accent);
+    }
+
+    /* Speed bonus text */
+    #speedBonusText {
+      color: var(--success);
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    /* Feedback panel slide-up */
+    #feedback.slide-in {
+      animation: feedbackSlide 0.3s ease forwards;
+    }
+
+    @keyframes feedbackSlide {
+      from { transform: translate(-50%, 20px); opacity: 0; }
+      to { transform: translate(-50%, 0); opacity: 1; }
+    }
+
+    /* Marker pulse */
+    @keyframes markerPulse {
+      0% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.8); opacity: 0.7; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .pulse-marker {
+      animation: markerPulse 0.6s ease-out;
+    }
+
+    /* Dashed line draw animation */
+    @keyframes dashDraw {
+      to { stroke-dashoffset: 0; }
+    }
+
+    .result-line {
+      animation: dashDraw 1s linear forwards;
+      stroke-dasharray: 10;
+      stroke-dashoffset: 200;
+    }
+
+    /* Summary per-tile list */
+    #focusSummaryList {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 20px;
+      text-align: left;
+      max-height: 180px;
+      overflow-y: auto;
+    }
+
+    #focusSummaryList li {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 12px;
+      margin-bottom: 6px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.05);
+      font-size: 0.95rem;
+    }
+
+    #focusSummaryList .tile-distance {
+      color: var(--muted);
+    }
+
+    #focusSummaryList .tile-points {
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    /* Share button */
+    #shareBtn {
+      margin-bottom: 12px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    }
+
   </style>
 </head>
 <body>
@@ -620,9 +734,13 @@
 
     <div id="hud" class="panel" style="display: none;">
       <div class="hud-item">Round <span class="hud-value" id="roundDisplay">1</span></div>
-      <div class="hud-item">Score <span class="hud-value" id="scoreDisplay">0</span></div>
+      <div class="hud-item">Score <span class="hud-value" id="scoreDisplay">0</span><span id="multiplierDisplay" class="multiplier-badge">x1.0</span></div>
       <div class="hud-item" id="timerDisplay" style="display: none;">Time <span class="hud-value" id="timeValue">0:00</span></div>
       <button class="secondary menu-btn" id="menuBtn" type="button">Menu</button>
+    </div>
+
+    <div id="progressBarContainer" style="display: none;">
+      <div id="progressBar"></div>
     </div>
 
     <div id="cityLabel">
@@ -676,6 +794,10 @@
             <input type="radio" name="gameMode" value="blitz" />
             Blitz (5 Rounds, 30s)
           </label>
+          <label class="mode-label">
+            <input type="radio" name="gameMode" value="focus-run" />
+            Focus Run (4 tiles, 45 s)
+          </label>
         </div>
       </div>
 
@@ -703,6 +825,7 @@
     <div id="feedback" class="panel">
       <div class="distance" id="distanceText"></div>
       <div class="points" id="pointsText"></div>
+      <div id="speedBonusText"></div>
       <button id="nextBtn" type="button">Next Round</button>
     </div>
 
@@ -710,6 +833,10 @@
       <h2 id="summaryTitle">Match Complete!</h2>
       <div class="final-score" id="finalScore">0</div>
       <div class="max-score" id="summarySubtitle">out of 5000 possible points</div>
+
+      <ul id="focusSummaryList" style="display: none;"></ul>
+
+      <button id="shareBtn" type="button">Share as Image</button>
 
       <div id="savePrompt">
         <p class="save-text">Save your score?</p>
@@ -739,6 +866,7 @@
           <option value="time-trial-5" selected>Time Trial (5 min)</option>
           <option value="time-trial-10">Time Trial (10 min)</option>
           <option value="blitz">Blitz</option>
+          <option value="focus-run">Focus Run</option>
         </select>
       </div>
       <div class="field">
@@ -774,6 +902,24 @@
       let timerInterval = null;
       let timeLimitMinutes = 5;
       let isHardMode = false;
+
+      // Game constants
+      const DEFAULT_CROP_SIZE = 400;
+      const FOCUS_RUN_SIZES = [1000, 500, 200, 100];
+      const FOCUS_RUN_TIME = 45;
+
+      // New game state
+      let satelliteCache = new Map();
+      let nextRoundData = null;
+      let preloadPromise = null;
+      let streak = 0;
+      let maxStreak = 0;
+      let tileStartTime = 0;
+      let currentMultiplier = 1.0;
+      let focusRunCity = null;
+      let focusRunResults = [];
+      let focusRunTileIndex = 0;
+      let focusRunTileCenters = [];
 
       // Leaderboard backend URL (Google Apps Script web app)
       // Split into parts to make casual scraping slightly harder
@@ -825,6 +971,12 @@
       const leaderboardModeSelect = document.getElementById('leaderboardModeSelect');
       const leaderboardHardModeCheck = document.getElementById('leaderboardHardModeCheck');
       const hardModeCheck = document.getElementById('hardModeCheck');
+      const multiplierDisplay = document.getElementById('multiplierDisplay');
+      const progressBarContainer = document.getElementById('progressBarContainer');
+      const progressBar = document.getElementById('progressBar');
+      const speedBonusText = document.getElementById('speedBonusText');
+      const shareBtn = document.getElementById('shareBtn');
+      const focusSummaryList = document.getElementById('focusSummaryList');
       const leaderboardMenuBtn = document.getElementById('leaderboardMenuBtn');
       const leaderboardBackBtn = document.getElementById('leaderboardBackBtn');
 
@@ -888,6 +1040,11 @@
       // cropSizeMeters controls the real-world area to cover (e.g. 500 = 500×500 m).
       // The pixel crop size is calculated dynamically from latitude so it's consistent.
       async function captureSatelliteCrop(lat, lng, cropSizeMeters) {
+        const cacheKey = `lat_${lat.toFixed(6)}_lng_${lng.toFixed(6)}_size_${cropSizeMeters}`;
+        if (satelliteCache.has(cacheKey)) {
+          return satelliteCache.get(cacheKey);
+        }
+
         const zoom = 18;
         const tileSize = 256;
         // Ground resolution at zoom 18: (cos(lat) * 2πR) / (256 * 2^18)
@@ -931,7 +1088,9 @@
         const cropStartX = (baseTileX - minTileX) * tileSize + offsetX - cropSize / 2;
         const cropStartY = (baseTileY - minTileY) * tileSize + offsetY - cropSize / 2;
         cropCtx.drawImage(composite, cropStartX, cropStartY, cropSize, cropSize, 0, 0, cropSize, cropSize);
-        return cropCanvas.toDataURL('image/png');
+        const dataUrl = cropCanvas.toDataURL('image/png');
+        satelliteCache.set(cacheKey, dataUrl);
+        return dataUrl;
       }
 
       // Initialize map
@@ -1025,9 +1184,18 @@
 
       // Update HUD
       function updateHUD() {
-        roundDisplay.textContent = (gameMode === 'match' || gameMode === 'blitz') ? `${round} / 5` : round;
+        if (gameMode === 'focus-run') {
+          roundDisplay.textContent = `Tile ${focusRunTileIndex + 1} / ${FOCUS_RUN_SIZES.length}`;
+        } else if (gameMode === 'match' || gameMode === 'blitz') {
+          roundDisplay.textContent = `${round} / 5`;
+        } else {
+          roundDisplay.textContent = round;
+        }
         scoreDisplay.textContent = score;
-        if (gameMode === 'time-trial' || gameMode === 'blitz') {
+        currentMultiplier = Math.min(2.0, 1.0 + streak * 0.1);
+        multiplierDisplay.textContent = `x${currentMultiplier.toFixed(1)}`;
+
+        if (gameMode === 'time-trial' || gameMode === 'blitz' || gameMode === 'focus-run') {
           timerDisplay.style.display = 'block';
           const minutes = Math.floor(timeLeft / 60);
           const seconds = timeLeft % 60;
@@ -1035,17 +1203,275 @@
         } else {
           timerDisplay.style.display = 'none';
         }
+
+        updateProgressBar();
+      }
+
+      function getCropSize() {
+        if (gameMode === 'focus-run') {
+          return FOCUS_RUN_SIZES[focusRunTileIndex];
+        }
+        return DEFAULT_CROP_SIZE;
+      }
+
+      function pickRandomTileCenter(city, previousCenters) {
+        const bounds = map.getBounds();
+        let attempts = 0;
+        let found = false;
+        let center;
+        do {
+          center = getRandomPointInRadius(city.lat, city.lng, city.radius || 7000);
+          found = isPointInBoundsWithPadding(center.lat, center.lng, bounds, 500);
+          if (found && previousCenters && previousCenters.length > 0) {
+            const tooClose = previousCenters.some(pc => haversine(center.lat, center.lng, pc.lat, pc.lng) < 10);
+            if (tooClose) found = false;
+          }
+          attempts++;
+        } while (!found && attempts < 50);
+        if (!found) {
+          center = { lat: city.lat, lng: city.lng };
+        }
+        return center;
+      }
+
+      function preloadNextRound() {
+        if (gameMode === 'focus-run') {
+          const nextTileIndex = focusRunTileIndex + 1;
+          if (nextTileIndex >= FOCUS_RUN_SIZES.length) return;
+          const city = focusRunCity;
+          if (!city) return;
+          preloadPromise = (async () => {
+            try {
+              const previous = focusRunTileCenters.slice(0, nextTileIndex);
+              const tileCenter = pickRandomTileCenter(city, previous);
+              const cropSize = FOCUS_RUN_SIZES[nextTileIndex];
+              const dataUrl = await captureSatelliteCrop(tileCenter.lat, tileCenter.lng, cropSize);
+              nextRoundData = { mode: 'focus-run', tileIndex: nextTileIndex, city, tileCenter, dataUrl };
+            } catch (err) {
+              console.error('Failed to preload next focus tile:', err);
+              nextRoundData = null;
+            }
+          })();
+        } else {
+          preloadPromise = (async () => {
+            try {
+              const city = pickRandomCity();
+              if (!city) {
+                nextRoundData = null;
+                return;
+              }
+              const tileCenter = pickRandomTileCenter(city);
+              const dataUrl = await captureSatelliteCrop(tileCenter.lat, tileCenter.lng, DEFAULT_CROP_SIZE);
+              nextRoundData = { mode: gameMode, city, tileCenter, dataUrl };
+            } catch (err) {
+              console.error('Failed to preload next round:', err);
+              nextRoundData = null;
+            }
+          })();
+        }
+      }
+
+      function startFocusRunTimer() {
+        if (timerInterval) return;
+        timeLeft = FOCUS_RUN_TIME;
+        updateHUD();
+        startTimer(() => {
+          handleFocusRunTimeout();
+        });
+      }
+
+      function handleFocusRunTimeout() {
+        piece.style.display = 'none';
+        confirmBtn.style.display = 'none';
+        cityLabel.style.display = 'none';
+        showSummary();
+      }
+
+      function updateProgressBar() {
+        let total = 0;
+        if (gameMode === 'match' || gameMode === 'blitz') total = 5;
+        else if (gameMode === 'focus-run') total = FOCUS_RUN_SIZES.length;
+        else {
+          progressBarContainer.style.display = 'none';
+          return;
+        }
+        progressBarContainer.style.display = 'flex';
+        progressBar.innerHTML = '';
+        const current = gameMode === 'focus-run' ? focusRunTileIndex + 1 : round;
+        for (let i = 0; i < total; i++) {
+          const seg = document.createElement('div');
+          seg.className = 'progress-segment' + (i < current ? ' active' : '');
+          progressBar.appendChild(seg);
+        }
+      }
+
+      function getModeLabel() {
+        switch (gameMode) {
+          case 'match': return 'Match';
+          case 'blitz': return 'Blitz';
+          case 'time-trial': return 'Time Trial';
+          case 'infinite': return 'Infinite';
+          case 'focus-run': return 'Focus Run';
+          default: return gameMode;
+        }
+      }
+
+      function downloadBlob(blob, filename) {
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+      }
+
+      async function generateShareImage() {
+        const canvas = document.createElement('canvas');
+        canvas.width = 1080;
+        canvas.height = 1920;
+        const ctx = canvas.getContext('2d');
+
+        // Background
+        ctx.fillStyle = '#0f172a';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        // Top accent bar
+        const grad = ctx.createLinearGradient(0, 0, canvas.width, 0);
+        grad.addColorStop(0, '#38bdf8');
+        grad.addColorStop(1, '#818cf8');
+        ctx.fillStyle = grad;
+        ctx.fillRect(0, 0, canvas.width, 16);
+
+        // Title
+        ctx.textAlign = 'center';
+        ctx.font = 'bold 120px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif';
+        ctx.fillStyle = '#f8fafc';
+        ctx.fillText('Puzzlite', canvas.width / 2, 300);
+
+        // Mode
+        ctx.font = '500 48px sans-serif';
+        ctx.fillStyle = '#94a3b8';
+        ctx.fillText(getModeLabel(), canvas.width / 2, 400);
+
+        // Score label
+        ctx.font = '500 40px sans-serif';
+        ctx.fillStyle = '#94a3b8';
+        ctx.fillText('Final Score', canvas.width / 2, 540);
+
+        // Score
+        ctx.font = 'bold 180px sans-serif';
+        const scoreGrad = ctx.createLinearGradient(0, 600, canvas.width, 600);
+        scoreGrad.addColorStop(0, '#38bdf8');
+        scoreGrad.addColorStop(1, '#818cf8');
+        ctx.fillStyle = scoreGrad;
+        ctx.fillText(score.toString(), canvas.width / 2, 740);
+
+        // Stats
+        ctx.font = '500 40px sans-serif';
+        ctx.fillStyle = '#f8fafc';
+        let stats = '';
+        if (gameMode === 'focus-run') {
+          stats = `${focusRunResults.length} of ${FOCUS_RUN_SIZES.length} tiles placed`;
+        } else if (gameMode === 'match' || gameMode === 'blitz') {
+          stats = '5 rounds';
+        } else {
+          stats = `${completedRounds} rounds`;
+        }
+        ctx.fillText(stats, canvas.width / 2, 880);
+        ctx.fillStyle = '#38bdf8';
+        ctx.fillText(`Best streak: ${maxStreak}`, canvas.width / 2, 960);
+
+        // Footer
+        ctx.font = '400 32px sans-serif';
+        ctx.fillStyle = '#64748b';
+        ctx.fillText('Can you beat my score?', canvas.width / 2, 1120);
+
+        canvas.toBlob(async (blob) => {
+          if (!blob) return;
+          const file = new File([blob], 'puzzlite-result.png', { type: 'image/png' });
+          if (navigator.canShare && navigator.canShare({ files: [file] })) {
+            try {
+              await navigator.share({ files: [file], title: 'Puzzlite Score', text: `I scored ${score} in Puzzlite!` });
+            } catch (err) {
+              if (err.name !== 'AbortError') {
+                downloadBlob(blob, 'puzzlite-result.png');
+              }
+            }
+          } else {
+            downloadBlob(blob, 'puzzlite-result.png');
+          }
+        });
       }
 
       // Start a round
       async function startRound() {
-        clearMarkers();
+        // For focus-run, keep markers from previous tiles until the end
+        if (gameMode !== 'focus-run' || focusRunTileIndex === 0) {
+          clearMarkers();
+        }
         feedbackEl.style.display = 'none';
+        feedbackEl.classList.remove('slide-in');
         piece.style.display = 'none';
         confirmBtn.style.display = 'none';
         cityLabel.style.display = 'none';
 
-        currentCity = pickRandomCity();
+        // If we have a preloaded round/tile, use it
+        if (preloadPromise && !nextRoundData) {
+          loadingEl.innerHTML = '<div class="spinner"></div><div>Loading next round...</div>';
+          loadingEl.style.display = 'flex';
+          await preloadPromise;
+          loadingEl.style.display = 'none';
+          loadingEl.innerHTML = '<div class="spinner"></div><div>Loading cities...</div>';
+        }
+
+        if (nextRoundData && nextRoundData.mode === gameMode && (gameMode !== 'focus-run' || nextRoundData.tileIndex === focusRunTileIndex)) {
+          currentCity = nextRoundData.city;
+          currentTileCenter = nextRoundData.tileCenter;
+          if (gameMode === 'focus-run') {
+            focusRunTileCenters[focusRunTileIndex] = currentTileCenter;
+          }
+          const dataUrl = nextRoundData.dataUrl;
+          nextRoundData = null;
+          preloadPromise = null;
+
+          cityName.textContent = `${currentCity.city}, ${currentCity.country}`;
+          cityLabel.style.display = 'block';
+          map.setView([currentCity.lat, currentCity.lng], 14, { animate: false });
+          map.setMinZoom(14);
+
+          piece.style.backgroundImage = `url(${dataUrl})`;
+          piece.style.display = 'block';
+          resetPiecePosition();
+          tileStartTime = Date.now();
+          if (gameMode === 'focus-run' && focusRunTileIndex === 0) {
+            startFocusRunTimer();
+          }
+          if (gameMode === 'blitz') {
+            timeLeft = 30;
+            updateHUD();
+            startTimer(() => {
+              if (piece.style.display !== 'none') {
+                isDragging = false;
+                piece.classList.remove('dragging');
+                if (map && map.dragging && !isHardMode) map.dragging.enable();
+                confirmBtn.style.display = 'none';
+                cityLabel.style.display = 'none';
+                handleDrop();
+              }
+            });
+          }
+          updateHUD();
+          return;
+        }
+
+        if (gameMode === 'focus-run') {
+          currentCity = focusRunCity;
+        } else {
+          currentCity = pickRandomCity();
+        }
+
         if (!currentCity) {
           alert('No cities match the selected filters.');
           showMenu();
@@ -1067,22 +1493,21 @@
           // Pick a random point within the city so the satellite piece isn't always the city center.
           // Keep regenerating until the point lies inside the currently visible map area so the
           // player can always see where the satellite image was taken.
-          const bounds = map.getBounds();
-          let attempts = 0;
-          let found = false;
-          do {
-            currentTileCenter = getRandomPointInRadius(currentCity.lat, currentCity.lng, currentCity.radius || 7000);
-            found = isPointInBoundsWithPadding(currentTileCenter.lat, currentTileCenter.lng, bounds, 500);
-            attempts++;
-          } while (!found && attempts < 50);
-          // Guarantee the point is always visible: fall back to the city center if needed.
-          if (!found) {
-            currentTileCenter = { lat: currentCity.lat, lng: currentCity.lng };
+          const previous = gameMode === 'focus-run' ? focusRunTileCenters.slice(0, focusRunTileIndex) : [];
+          currentTileCenter = pickRandomTileCenter(currentCity, previous);
+          if (gameMode === 'focus-run') {
+            focusRunTileCenters[focusRunTileIndex] = currentTileCenter;
           }
-          const dataUrl = await captureSatelliteCrop(currentTileCenter.lat, currentTileCenter.lng, 500);
+          const cropSize = getCropSize();
+          const dataUrl = await captureSatelliteCrop(currentTileCenter.lat, currentTileCenter.lng, cropSize);
           piece.style.backgroundImage = `url(${dataUrl})`;
           piece.style.display = 'block';
           resetPiecePosition();
+          tileStartTime = Date.now();
+          // Start the total timer for Focus Run when the first piece appears
+          if (gameMode === 'focus-run' && focusRunTileIndex === 0) {
+            startFocusRunTimer();
+          }
           // Start the per-round timer for Blitz mode
           if (gameMode === 'blitz') {
             timeLeft = 30;
@@ -1140,7 +1565,8 @@
       // Handle drop & score
       function handleDrop() {
         if (!currentCity || !map || !currentTileCenter) return;
-        stopTimer();
+        // Only stop the per-round timer in Blitz; time-trial and focus-run use a total timer
+        if (gameMode === 'blitz') stopTimer();
 
         const rect = piece.getBoundingClientRect();
         const centerX = rect.left + rect.width / 2;
@@ -1150,15 +1576,35 @@
 
         // Distance is measured from the RANDOM tile center (where the satellite image came from)
         const distance = haversine(currentTileCenter.lat, currentTileCenter.lng, dropLatLng.lat, dropLatLng.lng);
-        const points = calculatePoints(distance);
-        score += points;
+        const basePoints = calculatePoints(distance);
+
+        // Streak multiplier
+        if (distance < 100) {
+          streak++;
+          if (streak > maxStreak) maxStreak = streak;
+        } else {
+          streak = 0;
+        }
+        currentMultiplier = Math.min(2.0, 1.0 + streak * 0.1);
+        const multipliedPoints = Math.round(basePoints * currentMultiplier);
+
+        // Speed bonus (flat, not multiplied) only when base points are high enough
+        const elapsed = (Date.now() - tileStartTime) / 1000;
+        let speedBonus = 0;
+        if (basePoints > 900) {
+          if (elapsed < 5) speedBonus = 200;
+          else if (elapsed < 15) speedBonus = 100;
+        }
+
+        const totalPoints = multipliedPoints + speedBonus;
+        score += totalPoints;
         completedRounds++;
 
         // Markers: blue = the actual random point (correct answer), red = where user dropped
         const blueMarker = L.marker([currentTileCenter.lat, currentTileCenter.lng], {
           icon: L.divIcon({
             className: 'custom-marker',
-            html: '<div style="width:14px;height:14px;background:#3b82f6;border:2px solid #fff;border-radius:50%;box-shadow:0 2px 6px rgba(0,0,0,0.4);"></div>',
+            html: '<div class="pulse-marker" style="width:14px;height:14px;background:#3b82f6;border:2px solid #fff;border-radius:50%;box-shadow:0 2px 6px rgba(0,0,0,0.4);"></div>',
             iconSize: [14, 14],
             iconAnchor: [7, 7]
           })
@@ -1166,7 +1612,7 @@
         const redMarker = L.marker([dropLatLng.lat, dropLatLng.lng], {
           icon: L.divIcon({
             className: 'custom-marker',
-            html: '<div style="width:14px;height:14px;background:#ef4444;border:2px solid #fff;border-radius:50%;box-shadow:0 2px 6px rgba(0,0,0,0.4);"></div>',
+            html: '<div class="pulse-marker" style="width:14px;height:14px;background:#ef4444;border:2px solid #fff;border-radius:50%;box-shadow:0 2px 6px rgba(0,0,0,0.4);"></div>',
             iconSize: [14, 14],
             iconAnchor: [7, 7]
           })
@@ -1183,18 +1629,54 @@
             opacity: 0.9,
             dashArray: '8, 8',
             lineCap: 'round',
-            lineJoin: 'round'
+            lineJoin: 'round',
+            className: 'result-line'
           }
         ).addTo(map);
         roundMarkers.push(blueMarker, redMarker, resultLine);
 
+        // Focus Run: no feedback panel between tiles
+        if (gameMode === 'focus-run') {
+          focusRunResults.push({
+            tile: focusRunTileIndex + 1,
+            distance,
+            basePoints,
+            multiplier: currentMultiplier,
+            speedBonus,
+            totalPoints
+          });
+          piece.style.display = 'none';
+          cityLabel.style.display = 'none';
+          if (focusRunTileIndex < FOCUS_RUN_SIZES.length - 1) {
+            focusRunTileIndex++;
+            round = focusRunTileIndex + 1;
+            preloadNextRound();
+            startRound();
+          } else {
+            showSummary();
+          }
+          return;
+        }
+
         // Hide piece and show feedback
         piece.style.display = 'none';
         feedbackEl.style.display = 'block';
+        feedbackEl.classList.remove('slide-in');
+        void feedbackEl.offsetWidth;
+        feedbackEl.classList.add('slide-in');
         distanceText.textContent = `${Math.round(distance)}m away`;
-        pointsText.textContent = points > 0 ? `+${points} points` : '0 points';
-        pointsText.className = 'points ' + (points > 0 ? 'positive' : 'zero');
+        pointsText.textContent = totalPoints > 0 ? `+${totalPoints} points` : '0 points';
+        pointsText.className = 'points ' + (totalPoints > 0 ? 'positive' : 'zero');
+        if (speedBonus > 0) {
+          speedBonusText.textContent = `Speed bonus: +${speedBonus}`;
+          speedBonusText.style.display = 'block';
+        } else {
+          speedBonusText.style.display = 'none';
+        }
         updateHUD();
+
+        // Preload next round while the feedback panel is open
+        preloadNextRound();
       }
 
       // Drag handlers
@@ -1285,10 +1767,14 @@
         loadingEl.style.display = 'none';
         feedbackEl.style.display = 'none';
         hudEl.style.display = 'none';
+        progressBarContainer.style.display = 'none';
         piece.style.display = 'none';
         cityLabel.style.display = 'none';
         summaryEl.style.display = 'block';
         document.getElementById('finalScore').textContent = score;
+
+        focusSummaryList.style.display = 'none';
+        focusSummaryList.innerHTML = '';
 
         if (gameMode === 'match' || gameMode === 'blitz') {
           summaryTitle.textContent = gameMode === 'blitz' ? 'Blitz Complete!' : 'Match Complete!';
@@ -1296,6 +1782,15 @@
         } else if (gameMode === 'time-trial') {
           summaryTitle.textContent = "Time's Up!";
           summarySubtitle.textContent = `${completedRounds} rounds completed`;
+        } else if (gameMode === 'focus-run') {
+          summaryTitle.textContent = 'Focus Run Complete!';
+          summarySubtitle.textContent = `${focusRunResults.length} of ${FOCUS_RUN_SIZES.length} tiles placed`;
+          focusSummaryList.style.display = 'block';
+          focusRunResults.forEach(r => {
+            const li = document.createElement('li');
+            li.innerHTML = `<span class="tile-distance">Tile ${r.tile}: ${Math.round(r.distance)}m</span><span class="tile-points">+${r.totalPoints}</span>`;
+            focusSummaryList.appendChild(li);
+          });
         } else {
           summaryTitle.textContent = 'Game Over';
           summarySubtitle.textContent = `${completedRounds} rounds completed`;
@@ -1312,6 +1807,7 @@
       function showMenu() {
         menuEl.classList.remove('hidden');
         hudEl.style.display = 'none';
+        progressBarContainer.style.display = 'none';
         feedbackEl.style.display = 'none';
         summaryEl.style.display = 'none';
         leaderboardEl.style.display = 'none';
@@ -1380,7 +1876,8 @@
 
       function getMaxScoreForMode(mode, rounds) {
         if (mode === 'match' || mode === 'blitz') return 5000;
-        if (mode === 'time-trial') return rounds * 1000;
+        if (mode.startsWith('time-trial')) return rounds * 1000;
+        if (mode.startsWith('focus-run')) return rounds * 2200;
         return rounds * 1000;
       }
 
@@ -1516,8 +2013,27 @@
         round = 1;
         score = 0;
         completedRounds = 0;
+        streak = 0;
+        maxStreak = 0;
+        currentMultiplier = 1.0;
+        focusRunResults = [];
+        focusRunTileIndex = 0;
+        focusRunCity = null;
+        focusRunTileCenters = [];
+        nextRoundData = null;
+        preloadPromise = null;
         timeLimitMinutes = parseInt(timeLimitSelect.value, 10);
         timeLeft = timeLimitMinutes * 60;
+
+        if (gameMode === 'focus-run') {
+          focusRunCity = pickRandomCity();
+          if (!focusRunCity) {
+            alert('No cities match the selected filters. Please change your selection.');
+            return;
+          }
+          currentCity = focusRunCity;
+          timeLeft = FOCUS_RUN_TIME;
+        }
 
         if (getFilteredCities().length === 0) {
           alert('No cities match the selected filters. Please change your selection.');
@@ -1576,6 +2092,7 @@
         }
       });
       backToMenuBtn.addEventListener('click', showMenu);
+      shareBtn.addEventListener('click', generateShareImage);
 
       // Leaderboard event listeners
       saveScoreBtn.addEventListener('click', async () => {

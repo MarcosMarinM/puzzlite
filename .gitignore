@@ -8,6 +8,7 @@ Thumbs.db
 # IDE / editor
 .idea/
 .vscode/
+.dirac-cache/
 *.sublime-project
 *.sublime-workspace
 
