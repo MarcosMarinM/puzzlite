@@ -2,9 +2,6 @@
 
 A geography guessing game where you drop a satellite image snippet onto the correct location on a map. Built with vanilla HTML, CSS, and JavaScript, powered by Leaflet and Esri satellite imagery.
 
-<!-- Optional: add a screenshot or GIF here once you have one -->
-<!-- ![Gameplay screenshot](screenshot.png) -->
-
 ## How to Play
 
 1. Open `index.html` in a modern web browser.
@@ -44,7 +41,7 @@ Enable **Hard Mode** to disable panning and zooming for an extra challenge.
 
 ## City Data Format
 
-`cities.json` contains an array of city objects. City names are intentionally stored in their **local/original form** (endonyms) rather than English exonyms — for example `Xixón` instead of `Gijón`, `Lisboa` instead of `Lisbon`, and `Beograd` instead of `Belgrade.
+`cities.json` contains an array of city objects. City names are intentionally stored in their **local/original form** (endonyms) rather than English exonyms, for example `Xixón` instead of `Gijón`, `Lisboa` instead of `Lisbon`, and `Beograd` instead of `Belgrade.
 
 ```json
 {
