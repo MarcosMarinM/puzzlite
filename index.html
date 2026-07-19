@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>Puzzlite - Geography Guessing Game</title>
+  <title>Puzzlite - Geography guessing game</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <style>
     :root {
@@ -68,9 +68,12 @@
       left: 50%;
       transform: translate(-50%, -50%);
       width: min(90%, 420px);
+      max-height: min(90vh, 720px);
       padding: 28px;
       text-align: center;
       transition: opacity 0.3s ease, transform 0.3s ease;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
     }
 
     #menu.hidden {
@@ -750,7 +753,7 @@
 
     <div id="piece">
       <div class="crosshair"></div>
-      <button class="confirm-btn" id="confirmBtn">✔ Place Here</button>
+      <button class="confirm-btn" id="confirmBtn">✔ Place here</button>
     </div>
 
     <div id="menu" class="panel">
@@ -776,11 +779,11 @@
       </div>
 
       <div class="field">
-        <label>Game Mode</label>
+        <label>Game mode</label>
         <div class="mode-options">
           <label class="mode-label">
             <input type="radio" name="gameMode" value="match" checked />
-            Match (5 Rounds)
+            Match (5 rounds)
           </label>
           <label class="mode-label">
             <input type="radio" name="gameMode" value="infinite" />
@@ -788,7 +791,7 @@
           </label>
           <label class="mode-label">
             <input type="radio" name="gameMode" value="time-trial" />
-            Time Trial
+            Time trial
           </label>
           <label class="mode-label">
             <input type="radio" name="gameMode" value="blitz" />
@@ -796,13 +799,13 @@
           </label>
           <label class="mode-label">
             <input type="radio" name="gameMode" value="focus-run" />
-            Focus Run (4 tiles, 45 s)
+            Focus run (4 tiles, 45 s)
           </label>
         </div>
       </div>
 
       <div class="field" id="timeLimitField" style="display: none;">
-        <label for="timeLimitSelect">Time Limit</label>
+        <label for="timeLimitSelect">Time limit</label>
         <select id="timeLimitSelect">
           <option value="1">1 minute</option>
           <option value="3">3 minutes</option>
@@ -814,7 +817,7 @@
       <div class="field">
         <label class="mode-label" style="flex: 1 1 100%; min-width: auto; justify-content: center;">
           <input type="checkbox" id="hardModeCheck" />
-          Hard Mode (no pan / zoom)
+          Hard mode (no pan / zoom)
         </label>
       </div>
 
@@ -826,22 +829,22 @@
       <div class="distance" id="distanceText"></div>
       <div class="points" id="pointsText"></div>
       <div id="speedBonusText"></div>
-      <button id="nextBtn" type="button">Next Round</button>
+      <button id="nextBtn" type="button">Next round</button>
     </div>
 
     <div id="summary" class="panel">
-      <h2 id="summaryTitle">Match Complete!</h2>
+      <h2 id="summaryTitle">Match complete!</h2>
       <div class="final-score" id="finalScore">0</div>
       <div class="max-score" id="summarySubtitle">out of 5000 possible points</div>
 
       <ul id="focusSummaryList" style="display: none;"></ul>
 
-      <button id="shareBtn" type="button">Share as Image</button>
+      <button id="shareBtn" type="button">Share as image</button>
 
       <div id="savePrompt">
         <p class="save-text">Save your score?</p>
         <input type="text" id="playerName" placeholder="Your name" maxlength="20" />
-        <button id="saveScoreBtn" type="button">Save Score</button>
+        <button id="saveScoreBtn" type="button">Save score</button>
         <button class="secondary" id="skipSaveBtn" type="button">Skip</button>
       </div>
 
@@ -850,8 +853,8 @@
         <ol id="leaderboardList"></ol>
       </div>
 
-      <button class="secondary" id="summaryLeaderboardBtn" type="button">View Global Leaderboard</button>
-      <button id="backToMenuBtn" type="button">Back to Menu</button>
+      <button class="secondary" id="summaryLeaderboardBtn" type="button">View global leaderboard</button>
+      <button id="backToMenuBtn" type="button">Back to menu</button>
     </div>
 
     <div id="leaderboard" class="panel">
@@ -861,22 +864,22 @@
         <select id="leaderboardModeSelect">
           <option value="match">Match</option>
           <option value="infinite">Infinite</option>
-          <option value="time-trial-1">Time Trial (1 min)</option>
-          <option value="time-trial-3">Time Trial (3 min)</option>
-          <option value="time-trial-5" selected>Time Trial (5 min)</option>
-          <option value="time-trial-10">Time Trial (10 min)</option>
+          <option value="time-trial-1">Time trial (1 min)</option>
+          <option value="time-trial-3">Time trial (3 min)</option>
+          <option value="time-trial-5" selected>Time trial (5 min)</option>
+          <option value="time-trial-10">Time trial (10 min)</option>
           <option value="blitz">Blitz</option>
-          <option value="focus-run">Focus Run</option>
+          <option value="focus-run">Focus run</option>
         </select>
       </div>
       <div class="field">
         <label class="mode-label" style="flex: 1 1 100%; min-width: auto; justify-content: center;">
           <input type="checkbox" id="leaderboardHardModeCheck" />
-          Hard Mode
+          Hard mode
         </label>
       </div>
       <ol id="globalLeaderboardList"></ol>
-      <button id="leaderboardBackBtn" type="button">Back to Menu</button>
+      <button id="leaderboardBackBtn" type="button">Back to menu</button>
     </div>
   </div>
 
@@ -1141,7 +1144,7 @@
       }
 
       // Populate country checkboxes based on selected regions
-      function populateCountries() {
+      function populateCountries(isInitial = false) {
         const selectedRegions = Array.from(regionCheckboxes.querySelectorAll('input:checked')).map(cb => cb.value);
         const countries = new Set();
         allCities.forEach(city => {
@@ -1157,7 +1160,7 @@
           const checkbox = document.createElement('input');
           checkbox.type = 'checkbox';
           checkbox.value = country;
-          checkbox.checked = previous.includes(country) || previous.length === 0;
+          checkbox.checked = isInitial || previous.includes(country);
           label.appendChild(checkbox);
           label.appendChild(document.createTextNode(country));
           countryCheckboxes.appendChild(label);
@@ -1309,9 +1312,9 @@
         switch (gameMode) {
           case 'match': return 'Match';
           case 'blitz': return 'Blitz';
-          case 'time-trial': return 'Time Trial';
+          case 'time-trial': return 'Time trial';
           case 'infinite': return 'Infinite';
-          case 'focus-run': return 'Focus Run';
+          case 'focus-run': return 'Focus run';
           default: return gameMode;
         }
       }
@@ -1358,7 +1361,7 @@
         // Score label
         ctx.font = '500 40px sans-serif';
         ctx.fillStyle = '#94a3b8';
-        ctx.fillText('Final Score', canvas.width / 2, 540);
+        ctx.fillText('Final score', canvas.width / 2, 540);
 
         // Score
         ctx.font = 'bold 180px sans-serif';
@@ -1393,7 +1396,7 @@
           const file = new File([blob], 'puzzlite-result.png', { type: 'image/png' });
           if (navigator.canShare && navigator.canShare({ files: [file] })) {
             try {
-              await navigator.share({ files: [file], title: 'Puzzlite Score', text: `I scored ${score} in Puzzlite!` });
+              await navigator.share({ files: [file], title: 'Puzzlite score', text: `I scored ${score} in Puzzlite!` });
             } catch (err) {
               if (err.name !== 'AbortError') {
                 downloadBlob(blob, 'puzzlite-result.png');
@@ -1504,7 +1507,7 @@
           piece.style.display = 'block';
           resetPiecePosition();
           tileStartTime = Date.now();
-          // Start the total timer for Focus Run when the first piece appears
+          // Start the total timer for Focus run when the first piece appears
           if (gameMode === 'focus-run' && focusRunTileIndex === 0) {
             startFocusRunTimer();
           }
@@ -1554,7 +1557,7 @@
         return Math.round(1000 * (3000 - distance) / (3000 - 50));
       }
 
-      // Handle confirmation (user clicks "Place Here")
+      // Handle confirmation (user clicks "Place here")
       function confirmPlacement() {
         if (!currentCity || !map || !currentTileCenter) return;
         confirmBtn.style.display = 'none';
@@ -1635,7 +1638,7 @@
         ).addTo(map);
         roundMarkers.push(blueMarker, redMarker, resultLine);
 
-        // Focus Run: no feedback panel between tiles
+        // Focus run: no feedback panel between tiles
         if (gameMode === 'focus-run') {
           focusRunResults.push({
             tile: focusRunTileIndex + 1,
@@ -1777,13 +1780,13 @@
         focusSummaryList.innerHTML = '';
 
         if (gameMode === 'match' || gameMode === 'blitz') {
-          summaryTitle.textContent = gameMode === 'blitz' ? 'Blitz Complete!' : 'Match Complete!';
+          summaryTitle.textContent = gameMode === 'blitz' ? 'Blitz complete!' : 'Match complete!';
           summarySubtitle.textContent = 'out of 5000 possible points';
         } else if (gameMode === 'time-trial') {
           summaryTitle.textContent = "Time's Up!";
           summarySubtitle.textContent = `${completedRounds} rounds completed`;
         } else if (gameMode === 'focus-run') {
-          summaryTitle.textContent = 'Focus Run Complete!';
+          summaryTitle.textContent = 'Focus run complete!';
           summarySubtitle.textContent = `${focusRunResults.length} of ${FOCUS_RUN_SIZES.length} tiles placed`;
           focusSummaryList.style.display = 'block';
           focusRunResults.forEach(r => {
@@ -1792,7 +1795,7 @@
             focusSummaryList.appendChild(li);
           });
         } else {
-          summaryTitle.textContent = 'Game Over';
+          summaryTitle.textContent = 'Game over';
           summarySubtitle.textContent = `${completedRounds} rounds completed`;
         }
 
@@ -1894,7 +1897,7 @@
         }
 
         if (mode === 'time-trial' && rounds < 1) {
-          errors.push('Time Trial requires at least 1 completed round.');
+          errors.push('Time trial requires at least 1 completed round.');
         }
 
         const elapsedSeconds = (Date.now() - gameStartTime) / 1000;
@@ -2133,7 +2136,7 @@
           alert('Could not save score. Please try again.');
         } finally {
           saveScoreBtn.disabled = false;
-          saveScoreBtn.textContent = 'Save Score';
+          saveScoreBtn.textContent = 'Save score';
         }
       });
 
@@ -2185,7 +2188,7 @@
           if (!response.ok) throw new Error('Failed to fetch cities.json');
           allCities = await response.json();
           populateRegions();
-          populateCountries();
+          populateCountries(true);
           loadingEl.style.display = 'none';
         } catch (err) {
           console.error(err);

@@ -2,24 +2,24 @@
 
 A geography guessing game where you drop a satellite image snippet onto the correct location on a map. Built with vanilla HTML, CSS, and JavaScript, powered by Leaflet and Esri satellite imagery.
 
-## How to Play
+## How to play
 
 1. Open `index.html` in a modern web browser.
 2. Select a **region** and/or **country** from the menu.
 3. Choose a **game mode**.
 4. Click **Play**.
 5. Drag the floating satellite piece to where you think it was taken.
-6. Click **✔ Place Here** to confirm your guess.
+6. Click **✔ Place here** to confirm your guess.
 7. Earn points based on how close your guess is to the actual location.
 
-## Game Modes
+## Game modes
 
 - **Match**: 5 rounds. Score as many points as possible.
 - **Infinite**: Keep playing rounds with no limit.
-- **Time Trial**: Score as much as you can before time runs out.
+- **Time trial**: Score as much as you can before time runs out.
 - **Blitz**: 5 rounds, 30 seconds each.
 
-Enable **Hard Mode** to disable panning and zooming for an extra challenge.
+Enable **Hard mode** to disable panning and zooming for an extra challenge.
 
 ## Features
 
@@ -30,7 +30,7 @@ Enable **Hard Mode** to disable panning and zooming for an extra challenge.
 - 📱 Mobile-friendly touch controls
 - 🌐 Filter cities by region or country
 
-## File Structure
+## File structure
 
 ```
 .
@@ -39,7 +39,7 @@ Enable **Hard Mode** to disable panning and zooming for an extra challenge.
 └── README.md    # This file
 ```
 
-## City Data Format
+## City data format
 
 `cities.json` contains an array of city objects. City names are intentionally stored in their **local/original form** (endonyms) rather than English exonyms, for example `Xixón` instead of `Gijón`, `Lisboa` instead of `Lisbon`, and `Beograd` instead of `Belgrade.
 
@@ -68,7 +68,7 @@ Enable **Hard Mode** to disable panning and zooming for an extra challenge.
 - A modern web browser with JavaScript enabled
 - An internet connection (for map tiles and optional leaderboard)
 
-## Running Locally
+## Running locally
 
 No build step or dependencies are required. Simply serve the files with any static file server, for example:
 
@@ -78,7 +78,7 @@ python3 -m http.server 8000
 
 Then open `http://localhost:8000` in your browser.
 
-## Leaderboard Setup (Optional)
+## Leaderboard setup (optional)
 
 The game works fully offline without any leaderboard. If you want a global leaderboard, you can connect it to a Google Apps Script web app. To enable it:
 
