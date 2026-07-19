@@ -5257,7 +5257,6 @@
       "Iberia"
     ]
   },
-
   {
     "country": "Spain",
     "city": "Vélez-Málaga",
@@ -7074,5 +7073,5 @@
     "regions": [
       "Mediterranean"
     ]
-  },
+  }
 ]
