@@ -6838,5 +6838,1915 @@
     "regions": [
       "Baltic"
     ]
+  },
+  {
+    "country": "Germany",
+    "city": "Berlin",
+    "lat": 52.5173885,
+    "lng": 13.3951309,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Germany",
+    "city": "Hamburg",
+    "lat": 53.5501721,
+    "lng": 10.0013165,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Germany",
+    "city": "Munich",
+    "lat": 48.1371079,
+    "lng": 11.5753822,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Germany",
+    "city": "Cologne",
+    "lat": 50.938361,
+    "lng": 6.959974,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Germany",
+    "city": "Frankfurt",
+    "lat": 50.1106444,
+    "lng": 8.6820917,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Germany",
+    "city": "Stuttgart",
+    "lat": 48.7784485,
+    "lng": 9.1800132,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Germany",
+    "city": "Düsseldorf",
+    "lat": 51.2254018,
+    "lng": 6.7763137,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Germany",
+    "city": "Dortmund",
+    "lat": 51.5142273,
+    "lng": 7.4652789,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Germany",
+    "city": "Essen",
+    "lat": 51.4582235,
+    "lng": 7.0158171,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Germany",
+    "city": "Leipzig",
+    "lat": 51.3406321,
+    "lng": 12.3747329,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Germany",
+    "city": "Bremen",
+    "lat": 53.0758196,
+    "lng": 8.8071646,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Germany",
+    "city": "Dresden",
+    "lat": 51.0493286,
+    "lng": 13.7381437,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Germany",
+    "city": "Hanover",
+    "lat": 52.3744779,
+    "lng": 9.7385532,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Germany",
+    "city": "Nuremberg",
+    "lat": 49.453872,
+    "lng": 11.077298,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Germany",
+    "city": "Duisburg",
+    "lat": 51.434999,
+    "lng": 6.759562,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Germany",
+    "city": "Bochum",
+    "lat": 51.4818111,
+    "lng": 7.2196635,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Germany",
+    "city": "Wuppertal",
+    "lat": 51.264018,
+    "lng": 7.1780374,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Germany",
+    "city": "Bielefeld",
+    "lat": 52.0191005,
+    "lng": 8.531007,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Germany",
+    "city": "Bonn",
+    "lat": 50.7352621,
+    "lng": 7.1024635,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Germany",
+    "city": "Münster",
+    "lat": 51.9625101,
+    "lng": 7.6251879,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Germany",
+    "city": "Karlsruhe",
+    "lat": 49.0068705,
+    "lng": 8.4034195,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Germany",
+    "city": "Mannheim",
+    "lat": 49.4892913,
+    "lng": 8.4673098,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Germany",
+    "city": "Augsburg",
+    "lat": 48.3690341,
+    "lng": 10.8979522,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Germany",
+    "city": "Wiesbaden",
+    "lat": 50.0820384,
+    "lng": 8.2416556,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Germany",
+    "city": "Gelsenkirchen",
+    "lat": 51.5110321,
+    "lng": 7.0960124,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Germany",
+    "city": "Mönchengladbach",
+    "lat": 51.1947131,
+    "lng": 6.4353792,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Germany",
+    "city": "Braunschweig",
+    "lat": 52.2646577,
+    "lng": 10.5236066,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Germany",
+    "city": "Chemnitz",
+    "lat": 50.8323531,
+    "lng": 12.918914,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Germany",
+    "city": "Kiel",
+    "lat": 54.3227085,
+    "lng": 10.135555,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Germany",
+    "city": "Aachen",
+    "lat": 50.776351,
+    "lng": 6.083862,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Germany",
+    "city": "Magdeburg",
+    "lat": 52.1314783,
+    "lng": 11.6400789,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Germany",
+    "city": "Freiburg im Breisgau",
+    "lat": 47.9960901,
+    "lng": 7.8494005,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Germany",
+    "city": "Rostock",
+    "lat": 54.0886707,
+    "lng": 12.1400211,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Germany",
+    "city": "Erfurt",
+    "lat": 50.9777974,
+    "lng": 11.0287364,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Germany",
+    "city": "Mainz",
+    "lat": 49.9995205,
+    "lng": 8.2736253,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Germany",
+    "city": "Kassel",
+    "lat": 51.3157833,
+    "lng": 9.4978479,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Germany",
+    "city": "Hagen",
+    "lat": 51.3582945,
+    "lng": 7.473296,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Germany",
+    "city": "Saarbrücken",
+    "lat": 49.234362,
+    "lng": 6.996379,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Germany",
+    "city": "Hamm",
+    "lat": 50.0165178,
+    "lng": 6.4184628,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Germany",
+    "city": "Mülheim an der Ruhr",
+    "lat": 51.4272925,
+    "lng": 6.8829192,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Germany",
+    "city": "Potsdam",
+    "lat": 52.4009309,
+    "lng": 13.0591397,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Germany",
+    "city": "Ludwigshafen am Rhein",
+    "lat": 49.4704113,
+    "lng": 8.4381568,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Germany",
+    "city": "Oldenburg",
+    "lat": 53.1389753,
+    "lng": 8.2146017,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Germany",
+    "city": "Osnabrück",
+    "lat": 52.2719595,
+    "lng": 8.047635,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Germany",
+    "city": "Leverkusen",
+    "lat": 51.0324743,
+    "lng": 6.9881194,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Germany",
+    "city": "Heidelberg",
+    "lat": 49.4093582,
+    "lng": 8.694724,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Germany",
+    "city": "Darmstadt",
+    "lat": 49.872775,
+    "lng": 8.651177,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Germany",
+    "city": "Solingen",
+    "lat": 51.1721629,
+    "lng": 7.0845893,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Germany",
+    "city": "Herne",
+    "lat": 51.5380394,
+    "lng": 7.219985,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Germany",
+    "city": "Neuss",
+    "lat": 51.1981778,
+    "lng": 6.6916476,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Poland",
+    "city": "Warsaw",
+    "lat": 52.2333742,
+    "lng": 21.0711489,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Poland",
+    "city": "Kraków",
+    "lat": 50.0469432,
+    "lng": 19.9971534,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Poland",
+    "city": "Łódź",
+    "lat": 51.7687323,
+    "lng": 19.4569911,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Poland",
+    "city": "Wrocław",
+    "lat": 51.1089776,
+    "lng": 17.0326689,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Poland",
+    "city": "Poznań",
+    "lat": 52.4006632,
+    "lng": 16.9197326,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Poland",
+    "city": "Gdańsk",
+    "lat": 54.3482907,
+    "lng": 18.6540233,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Poland",
+    "city": "Szczecin",
+    "lat": 53.4298114,
+    "lng": 14.5928676,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Poland",
+    "city": "Bydgoszcz",
+    "lat": 53.1297127,
+    "lng": 18.0294488,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Poland",
+    "city": "Lublin",
+    "lat": 51.2181945,
+    "lng": 22.5546776,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Poland",
+    "city": "Białystok",
+    "lat": 53.127505,
+    "lng": 23.1470509,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Poland",
+    "city": "Katowice",
+    "lat": 50.2137315,
+    "lng": 19.0058848,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Poland",
+    "city": "Gdynia",
+    "lat": 54.5233304,
+    "lng": 18.6040279,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Poland",
+    "city": "Częstochowa",
+    "lat": 50.8089997,
+    "lng": 19.1244089,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Poland",
+    "city": "Radom",
+    "lat": 51.416727,
+    "lng": 21.1607392,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Poland",
+    "city": "Sosnowiec",
+    "lat": 50.2712401,
+    "lng": 19.2155628,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Poland",
+    "city": "Toruń",
+    "lat": 53.0145361,
+    "lng": 18.5965831,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Poland",
+    "city": "Kielce",
+    "lat": 50.8719903,
+    "lng": 20.6310488,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Poland",
+    "city": "Rzeszów",
+    "lat": 50.013319,
+    "lng": 22.0161677,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Poland",
+    "city": "Gliwice",
+    "lat": 50.294113,
+    "lng": 18.6657306,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Poland",
+    "city": "Zabrze",
+    "lat": 50.3142806,
+    "lng": 18.7815763,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Poland",
+    "city": "Olsztyn",
+    "lat": 53.776644,
+    "lng": 20.4777531,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Poland",
+    "city": "Bielsko-Biała",
+    "lat": 49.8120785,
+    "lng": 19.0291988,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Poland",
+    "city": "Bytom",
+    "lat": 50.3652854,
+    "lng": 18.8722567,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Poland",
+    "city": "Zielona Góra",
+    "lat": 51.9275737,
+    "lng": 15.5490421,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Poland",
+    "city": "Rybnik",
+    "lat": 50.0955793,
+    "lng": 18.5419933,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Poland",
+    "city": "Ruda Śląska",
+    "lat": 50.2698658,
+    "lng": 18.8642588,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Poland",
+    "city": "Opole",
+    "lat": 50.6668184,
+    "lng": 17.9236408,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Poland",
+    "city": "Tychy",
+    "lat": 50.126498,
+    "lng": 19.0067846,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Poland",
+    "city": "Gorzów Wielkopolski",
+    "lat": 52.7305756,
+    "lng": 15.2107553,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Poland",
+    "city": "Płock",
+    "lat": 52.5353471,
+    "lng": 19.7136301,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Czech Republic",
+    "city": "Prague",
+    "lat": 50.0874654,
+    "lng": 14.4212535,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Czech Republic",
+    "city": "Brno",
+    "lat": 49.1922443,
+    "lng": 16.6113382,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Czech Republic",
+    "city": "Ostrava",
+    "lat": 49.8354045,
+    "lng": 18.292978,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Czech Republic",
+    "city": "Plzeň",
+    "lat": 49.7477415,
+    "lng": 13.3775249,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Czech Republic",
+    "city": "Liberec",
+    "lat": 50.7702648,
+    "lng": 15.0583947,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Czech Republic",
+    "city": "Olomouc",
+    "lat": 49.5940567,
+    "lng": 17.251143,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Czech Republic",
+    "city": "České Budějovice",
+    "lat": 48.9747357,
+    "lng": 14.474285,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Czech Republic",
+    "city": "Hradec Králové",
+    "lat": 50.2092113,
+    "lng": 15.8327512,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Czech Republic",
+    "city": "Ústí nad Labem",
+    "lat": 50.6603327,
+    "lng": 14.0381357,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Czech Republic",
+    "city": "Pardubice",
+    "lat": 50.0385812,
+    "lng": 15.7791356,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Czech Republic",
+    "city": "Zlín",
+    "lat": 49.226766,
+    "lng": 17.6667415,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Czech Republic",
+    "city": "Opava",
+    "lat": 49.9389004,
+    "lng": 17.9024174,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Czech Republic",
+    "city": "Frýdek-Místek",
+    "lat": 49.685635,
+    "lng": 18.3483416,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Czech Republic",
+    "city": "Havířov",
+    "lat": 49.7801136,
+    "lng": 18.4368451,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Czech Republic",
+    "city": "Kladno",
+    "lat": 49.7673576,
+    "lng": 15.9729537,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Czech Republic",
+    "city": "Most",
+    "lat": 50.5032737,
+    "lng": 13.636112,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Czech Republic",
+    "city": "Karviná",
+    "lat": 49.8542719,
+    "lng": 18.5416556,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Czech Republic",
+    "city": "Jihlava",
+    "lat": 49.396064,
+    "lng": 15.5903065,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Czech Republic",
+    "city": "Teplice",
+    "lat": 50.6406644,
+    "lng": 13.8244461,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Czech Republic",
+    "city": "Jablonec nad Nisou",
+    "lat": 50.7240899,
+    "lng": 15.1710958,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Slovakia",
+    "city": "Bratislava",
+    "lat": 48.1516988,
+    "lng": 17.1093063,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Slovakia",
+    "city": "Košice",
+    "lat": 48.7172272,
+    "lng": 21.2496774,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Slovakia",
+    "city": "Prešov",
+    "lat": 49.0000074,
+    "lng": 21.2392122,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Slovakia",
+    "city": "Žilina",
+    "lat": 49.2234674,
+    "lng": 18.7393139,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Slovakia",
+    "city": "Banská Bystrica",
+    "lat": 48.735429,
+    "lng": 19.1457338,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Slovakia",
+    "city": "Nitra",
+    "lat": 48.31295,
+    "lng": 18.0894593,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Slovakia",
+    "city": "Trnava",
+    "lat": 48.374218,
+    "lng": 17.5809299,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Slovakia",
+    "city": "Trenčín",
+    "lat": 48.8922719,
+    "lng": 18.0387465,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Slovakia",
+    "city": "Martin",
+    "lat": 49.0724921,
+    "lng": 18.929193,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Slovakia",
+    "city": "Poprad",
+    "lat": 49.0541521,
+    "lng": 20.2976401,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Slovakia",
+    "city": "Prievidza",
+    "lat": 48.7718361,
+    "lng": 18.6234916,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Slovakia",
+    "city": "Zvolen",
+    "lat": 48.5782517,
+    "lng": 19.1247135,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Slovakia",
+    "city": "Michalovce",
+    "lat": 48.7514383,
+    "lng": 21.9211949,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Slovakia",
+    "city": "Spišská Nová Ves",
+    "lat": 48.9435344,
+    "lng": 20.562964,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Slovakia",
+    "city": "Komárno",
+    "lat": 47.7574079,
+    "lng": 18.1298249,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Slovakia",
+    "city": "Levice",
+    "lat": 48.2163194,
+    "lng": 18.6000869,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Slovakia",
+    "city": "Bardejov",
+    "lat": 49.2926871,
+    "lng": 21.2756031,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Slovakia",
+    "city": "Topoľčany",
+    "lat": 48.5594345,
+    "lng": 18.1754394,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Slovakia",
+    "city": "Lučenec",
+    "lat": 48.3303886,
+    "lng": 19.6634149,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Slovakia",
+    "city": "Piešťany",
+    "lat": 48.5895247,
+    "lng": 17.8213848,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Hungary",
+    "city": "Budapest",
+    "lat": 47.4813896,
+    "lng": 19.1457723,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Hungary",
+    "city": "Debrecen",
+    "lat": 47.531399,
+    "lng": 21.6259782,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Hungary",
+    "city": "Szeged",
+    "lat": 46.2546312,
+    "lng": 20.1486016,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Hungary",
+    "city": "Miskolc",
+    "lat": 48.1030643,
+    "lng": 20.7900429,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Hungary",
+    "city": "Pécs",
+    "lat": 46.0765092,
+    "lng": 18.2280317,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Hungary",
+    "city": "Győr",
+    "lat": 47.6835029,
+    "lng": 17.6342832,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Hungary",
+    "city": "Nyíregyháza",
+    "lat": 47.9557802,
+    "lng": 21.7167982,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Hungary",
+    "city": "Kecskemét",
+    "lat": 46.9074763,
+    "lng": 19.6920854,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Hungary",
+    "city": "Székesfehérvár",
+    "lat": 47.1910169,
+    "lng": 18.410811,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Hungary",
+    "city": "Szombathely",
+    "lat": 47.2291184,
+    "lng": 16.6187625,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Hungary",
+    "city": "Szolnok",
+    "lat": 47.1753833,
+    "lng": 20.1946279,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Hungary",
+    "city": "Tatabánya",
+    "lat": 47.583845,
+    "lng": 18.3979855,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Hungary",
+    "city": "Kaposvár",
+    "lat": 46.3564692,
+    "lng": 17.7886886,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Hungary",
+    "city": "Érd",
+    "lat": 47.3772495,
+    "lng": 18.9213833,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Hungary",
+    "city": "Veszprém",
+    "lat": 47.0933824,
+    "lng": 17.9080406,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Hungary",
+    "city": "Békéscsaba",
+    "lat": 46.6798003,
+    "lng": 21.0985425,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Hungary",
+    "city": "Zalaegerszeg",
+    "lat": 46.8415803,
+    "lng": 16.8456316,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Hungary",
+    "city": "Sopron",
+    "lat": 47.6803063,
+    "lng": 16.5983457,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Hungary",
+    "city": "Eger",
+    "lat": 47.8989887,
+    "lng": 20.3743665,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Hungary",
+    "city": "Nagykanizsa",
+    "lat": 46.4548261,
+    "lng": 16.9923923,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Hungary",
+    "city": "Dunakeszi",
+    "lat": 47.6316697,
+    "lng": 19.1294055,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Hungary",
+    "city": "Hódmezővásárhely",
+    "lat": 46.4171344,
+    "lng": 20.3196068,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Hungary",
+    "city": "Szigetszentmiklós",
+    "lat": 47.3487056,
+    "lng": 19.0452409,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Hungary",
+    "city": "Cegléd",
+    "lat": 47.1716447,
+    "lng": 19.7977516,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Hungary",
+    "city": "Baja",
+    "lat": 46.1785471,
+    "lng": 18.9517255,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Hungary",
+    "city": "Szentendre",
+    "lat": 47.6677606,
+    "lng": 19.0760467,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Hungary",
+    "city": "Vác",
+    "lat": 47.7782873,
+    "lng": 19.1278294,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Hungary",
+    "city": "Gödöllő",
+    "lat": 47.601529,
+    "lng": 19.3476981,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Hungary",
+    "city": "Hajdúböszörmény",
+    "lat": 47.6716617,
+    "lng": 21.5078944,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Hungary",
+    "city": "Kiskunhalas",
+    "lat": 46.4304454,
+    "lng": 19.4812571,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Switzerland",
+    "city": "Zürich",
+    "lat": 47.3744489,
+    "lng": 8.5410422,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Switzerland",
+    "city": "Geneva",
+    "lat": 46.2017559,
+    "lng": 6.1466014,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Switzerland",
+    "city": "Basel",
+    "lat": 47.5581077,
+    "lng": 7.5878261,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Switzerland",
+    "city": "Bern",
+    "lat": 46.9484742,
+    "lng": 7.4521749,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Switzerland",
+    "city": "Lausanne",
+    "lat": 46.5218269,
+    "lng": 6.6327025,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Switzerland",
+    "city": "Lucerne",
+    "lat": 47.052144,
+    "lng": 8.3058123,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Switzerland",
+    "city": "St. Gallen",
+    "lat": 47.425618,
+    "lng": 9.3762397,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Switzerland",
+    "city": "Winterthur",
+    "lat": 47.4991723,
+    "lng": 8.7291498,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Switzerland",
+    "city": "Lugano",
+    "lat": 46.0038007,
+    "lng": 8.9512275,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Switzerland",
+    "city": "Biel/Bienne",
+    "lat": 47.1402077,
+    "lng": 7.2439029,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Switzerland",
+    "city": "Thun",
+    "lat": 46.7582827,
+    "lng": 7.628086,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Switzerland",
+    "city": "Bellinzona",
+    "lat": 46.1920538,
+    "lng": 9.0205888,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Switzerland",
+    "city": "Köniz",
+    "lat": 46.9222385,
+    "lng": 7.4130582,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Switzerland",
+    "city": "Fribourg",
+    "lat": 46.6789116,
+    "lng": 7.1027113,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Switzerland",
+    "city": "Schaffhausen",
+    "lat": 47.6960491,
+    "lng": 8.634513,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Switzerland",
+    "city": "Chur",
+    "lat": 46.854747,
+    "lng": 9.5264904,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Switzerland",
+    "city": "Neuchâtel",
+    "lat": 46.9895828,
+    "lng": 6.9292641,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Switzerland",
+    "city": "Sion",
+    "lat": 46.2311749,
+    "lng": 7.3588795,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Switzerland",
+    "city": "Zug",
+    "lat": 47.1486137,
+    "lng": 8.5539378,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Switzerland",
+    "city": "Uster",
+    "lat": 47.3512065,
+    "lng": 8.7179221,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Austria",
+    "city": "Vienna",
+    "lat": 48.2083537,
+    "lng": 16.3725042,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Austria",
+    "city": "Graz",
+    "lat": 47.0708678,
+    "lng": 15.4382786,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Austria",
+    "city": "Linz",
+    "lat": 48.3059078,
+    "lng": 14.286198,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Austria",
+    "city": "Salzburg",
+    "lat": 47.7981346,
+    "lng": 13.0464806,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Austria",
+    "city": "Innsbruck",
+    "lat": 47.2654296,
+    "lng": 11.3927685,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Austria",
+    "city": "Klagenfurt",
+    "lat": 46.623943,
+    "lng": 14.3075976,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Austria",
+    "city": "Villach",
+    "lat": 46.6167284,
+    "lng": 13.8500268,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Austria",
+    "city": "Wels",
+    "lat": 48.1565472,
+    "lng": 14.0243752,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Austria",
+    "city": "Sankt Pölten",
+    "lat": 48.2043985,
+    "lng": 15.6229118,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Austria",
+    "city": "Dornbirn",
+    "lat": 47.4136351,
+    "lng": 9.7423762,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Austria",
+    "city": "Steyr",
+    "lat": 48.0390046,
+    "lng": 14.4191276,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Austria",
+    "city": "Leonding",
+    "lat": 48.2793314,
+    "lng": 14.2487457,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Austria",
+    "city": "Traun",
+    "lat": 47.9186081,
+    "lng": 13.8023057,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Austria",
+    "city": "Amstetten",
+    "lat": 48.1203262,
+    "lng": 14.8752424,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Austria",
+    "city": "Klosterneuburg",
+    "lat": 48.30499,
+    "lng": 16.323756,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Austria",
+    "city": "Pasching",
+    "lat": 48.2576453,
+    "lng": 14.2044214,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Austria",
+    "city": "Baden bei Wien",
+    "lat": 48.0076713,
+    "lng": 16.2343693,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Austria",
+    "city": "Wolfsberg",
+    "lat": 46.8390583,
+    "lng": 14.8452061,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Austria",
+    "city": "Feldkirchen",
+    "lat": 46.7284183,
+    "lng": 14.0906473,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Austria",
+    "city": "Mödling",
+    "lat": 48.0855922,
+    "lng": 16.2833526,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
+  },
+  {
+    "country": "Liechtenstein",
+    "city": "Vaduz",
+    "lat": 47.1392862,
+    "lng": 9.5227962,
+    "radius": 7000,
+    "regions": [
+      "Central Europe"
+    ]
   }
 ]
