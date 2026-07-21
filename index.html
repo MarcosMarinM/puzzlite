@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>Puzzlite - Geography guessing game</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="icon" type="image/png" href="favicon.png" />
   <style>
     :root {
       --bg: #0f172a;
@@ -68,6 +69,7 @@
       left: 50%;
       transform: translate(-50%, -50%);
       width: min(90%, 420px);
+      z-index: 1300;
       max-height: min(90vh, 720px);
       padding: 0;
       text-align: center;
@@ -249,14 +251,20 @@
 
     /* HUD */
     #hud {
-      top: 12px;
-      left: 12px;
-      right: 12px;
+      top: 0;
+      left: 0;
+      right: 0;
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 12px 16px;
-      pointer-events: none;
+      background: var(--bg);
+      border-radius: 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+      pointer-events: auto;
+      z-index: 1200;
     }
 
     #hud .hud-item {
@@ -281,10 +289,10 @@
     /* City name badge */
     #cityLabel {
       position: absolute;
-      top: 60px;
+      top: 80px;
       left: 50%;
       transform: translateX(-50%);
-      z-index: 1000;
+      z-index: 1100;
       background: var(--panel);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
@@ -316,14 +324,23 @@
       border-radius: 12px;
       border: 2px solid rgba(255, 255, 255, 0.8);
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+      overflow: hidden;
       cursor: grab;
       touch-action: none;
       display: none;
       user-select: none;
       -webkit-user-select: none;
+    }
+
+    #piece .piece-image {
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      transform-origin: center;
+      pointer-events: none;
     }
 
     #piece.dragging {
@@ -415,6 +432,7 @@
       left: 50%;
       transform: translate(-50%, -50%);
       width: min(90%, 420px);
+      z-index: 1300;
       padding: 32px;
       text-align: center;
       display: none;
@@ -576,6 +594,7 @@
       left: 50%;
       transform: translate(-50%, -50%);
       width: min(90%, 420px);
+      z-index: 1300;
       padding: 28px;
       text-align: center;
       display: none;
@@ -679,10 +698,10 @@
     /* Progress bar */
     #progressBarContainer {
       position: absolute;
-      top: 68px;
+      top: 88px;
       left: 12px;
       right: 12px;
-      z-index: 1000;
+      z-index: 1100;
       display: flex;
       gap: 4px;
       pointer-events: none;
@@ -804,6 +823,7 @@
     </div>
 
     <div id="piece">
+      <div class="piece-image" id="pieceImage"></div>
       <div class="crosshair"></div>
       <button class="confirm-btn" id="confirmBtn">✔ Place here</button>
     </div>    <div id="menu" class="panel">
@@ -812,6 +832,7 @@
         <div class="wizard-progress">
           <div class="wizard-dot active" id="wizardDot1"></div>
           <div class="wizard-dot" id="wizardDot2"></div>
+          <div class="wizard-dot" id="wizardDot3"></div>
         </div>
 
         <!-- Step 1: Game mode -->
@@ -870,10 +891,10 @@
           </div>
         </div>
 
-        <!-- Step 2: Regions / countries -->
+        <!-- Step 2: Regions -->
         <div id="wizardStep2" style="display: none;">
           <h1>Puzzlite</h1>
-          <div class="tagline">Select map areas</div>
+          <div class="tagline">Select regions</div>
 
           <div class="field">
             <label>Regions</label>
@@ -883,6 +904,12 @@
               <button type="button" id="deselectAllRegions">Deselect all</button>
             </div>
           </div>
+        </div>
+
+        <!-- Step 3: Countries -->
+        <div id="wizardStep3" style="display: none;">
+          <h1>Puzzlite</h1>
+          <div class="tagline">Select countries</div>
 
           <div class="field">
             <label>Countries</label>
@@ -897,14 +924,20 @@
 
       <!-- Footer for step 1 -->
       <div class="menu-footer" id="footerStep1">
-        <button id="nextStepBtn" type="button">Next</button>
+        <button id="nextStepBtn1" type="button">Next</button>
         <button class="secondary" id="leaderboardMenuBtn" type="button">Leaderboard</button>
       </div>
 
       <!-- Footer for step 2 -->
       <div class="menu-footer" id="footerStep2" style="display: none;">
+        <button id="nextStepBtn2" type="button">Next</button>
+        <button class="secondary" id="backStepBtn2" type="button">Back</button>
+      </div>
+
+      <!-- Footer for step 3 -->
+      <div class="menu-footer" id="footerStep3" style="display: none;">
         <button id="playBtn" type="button">Play</button>
-        <button class="secondary" id="backStepBtn" type="button">Back</button>
+        <button class="secondary" id="backStepBtn3" type="button">Back</button>
       </div>
     </div>
 
@@ -913,6 +946,7 @@
       <div class="points" id="pointsText"></div>
       <div id="speedBonusText"></div>
       <button id="nextBtn" type="button">Next round</button>
+      <button id="endGameBtn" class="secondary" type="button" style="display: none;">End game</button>
     </div>
 
     <div id="summary" class="panel">
@@ -1006,7 +1040,7 @@
       let tileStartTime = 0;
       let currentMultiplier = 1.0;
       let focusRunCity = null;
-      let focusRunResults = [];
+      let roundResults = [];
       let focusRunTileIndex = 0;
       let focusRunTileCenters = [];
 
@@ -1031,9 +1065,11 @@
       const countryCheckboxes = document.getElementById('countryCheckboxes');
       const playBtn = document.getElementById('playBtn');
       const nextBtn = document.getElementById('nextBtn');
+      const endGameBtn = document.getElementById('endGameBtn');
       const menuBtn = document.getElementById('menuBtn');
       const backToMenuBtn = document.getElementById('backToMenuBtn');
       const piece = document.getElementById('piece');
+      const pieceImage = document.getElementById('pieceImage');
       const confirmBtn = document.getElementById('confirmBtn');
       const roundDisplay = document.getElementById('roundDisplay');
       const scoreDisplay = document.getElementById('scoreDisplay');
@@ -1073,12 +1109,17 @@
       // Wizard refs
       const wizardStep1 = document.getElementById('wizardStep1');
       const wizardStep2 = document.getElementById('wizardStep2');
+      const wizardStep3 = document.getElementById('wizardStep3');
       const footerStep1 = document.getElementById('footerStep1');
       const footerStep2 = document.getElementById('footerStep2');
-      const nextStepBtn = document.getElementById('nextStepBtn');
-      const backStepBtn = document.getElementById('backStepBtn');
+      const footerStep3 = document.getElementById('footerStep3');
+      const nextStepBtn1 = document.getElementById('nextStepBtn1');
+      const nextStepBtn2 = document.getElementById('nextStepBtn2');
+      const backStepBtn2 = document.getElementById('backStepBtn2');
+      const backStepBtn3 = document.getElementById('backStepBtn3');
       const wizardDot1 = document.getElementById('wizardDot1');
       const wizardDot2 = document.getElementById('wizardDot2');
+      const wizardDot3 = document.getElementById('wizardDot3');
 
       // Haversine distance in meters
       function haversine(lat1, lng1, lat2, lng2) {
@@ -1371,6 +1412,14 @@
         }
       }
 
+      // Start preloading the next round if it hasn't already been started and there is a next round to load.
+      function maybePreloadNextRound() {
+        if (preloadPromise) return;
+        if (gameMode === 'focus-run' && focusRunTileIndex + 1 >= FOCUS_RUN_SIZES.length) return;
+        if ((gameMode === 'match' || gameMode === 'blitz') && round >= 5) return;
+        preloadNextRound();
+      }
+
       function startFocusRunTimer() {
         if (timerInterval) return;
         timeLeft = FOCUS_RUN_TIME;
@@ -1473,20 +1522,41 @@
         ctx.fillStyle = '#f8fafc';
         let stats = '';
         if (gameMode === 'focus-run') {
-          stats = `${focusRunResults.length} of ${FOCUS_RUN_SIZES.length} tiles placed`;
-        } else if (gameMode === 'match' || gameMode === 'blitz') {
-          stats = '5 rounds';
+          stats = `${roundResults.length} of ${FOCUS_RUN_SIZES.length} tiles placed`;
         } else {
-          stats = `${completedRounds} rounds`;
+          stats = `${roundResults.length} rounds`;
         }
         ctx.fillText(stats, canvas.width / 2, 880);
         ctx.fillStyle = '#38bdf8';
         ctx.fillText(`Best streak: ${maxStreak}`, canvas.width / 2, 960);
 
+        // Round results
+        if (roundResults.length > 0) {
+          ctx.textAlign = 'center';
+          ctx.font = '500 40px sans-serif';
+          ctx.fillStyle = '#94a3b8';
+          ctx.fillText('Rounds', canvas.width / 2, 1040);
+
+          let y = 1100;
+          ctx.font = '500 32px sans-serif';
+          roundResults.slice(0, 8).forEach((r) => {
+            if (y > 1700) return;
+            ctx.fillStyle = '#f8fafc';
+            ctx.fillText(`Round ${r.round}: ${r.city}, ${r.country}`, canvas.width / 2, y);
+            ctx.fillStyle = '#38bdf8';
+            ctx.fillText(`${Math.round(r.distance)}m — +${r.points}`, canvas.width / 2, y + 40);
+            y += 80;
+          });
+          if (roundResults.length > 8) {
+            ctx.fillStyle = '#94a3b8';
+            ctx.fillText(`...and ${roundResults.length - 8} more`, canvas.width / 2, y + 20);
+          }
+        }
+
         // Footer
         ctx.font = '400 32px sans-serif';
         ctx.fillStyle = '#64748b';
-        ctx.fillText('Can you beat my score?', canvas.width / 2, 1120);
+        ctx.fillText('Can you beat my score?', canvas.width / 2, 1840);
 
         canvas.toBlob(async (blob) => {
           if (!blob) return;
@@ -1542,7 +1612,7 @@
           map.setView([currentCity.lat, currentCity.lng], 14, { animate: false });
           map.setMinZoom(14);
 
-          piece.style.backgroundImage = `url(${dataUrl})`;
+          pieceImage.style.backgroundImage = `url(${dataUrl})`;
           piece.style.display = 'block';
           if (isDizzyMode) applyDizzyRotation();
           resetPiecePosition();
@@ -1564,6 +1634,7 @@
               }
             });
           }
+          maybePreloadNextRound();
           updateHUD();
           return;
         }
@@ -1602,7 +1673,7 @@
           }
           const cropSize = getCropSize();
           const dataUrl = await captureSatelliteCrop(currentTileCenter.lat, currentTileCenter.lng, cropSize);
-          piece.style.backgroundImage = `url(${dataUrl})`;
+          pieceImage.style.backgroundImage = `url(${dataUrl})`;
           piece.style.display = 'block';
           if (isDizzyMode) applyDizzyRotation();
           resetPiecePosition();
@@ -1626,6 +1697,7 @@
               }
             });
           }
+          maybePreloadNextRound();
         } catch (err) {
           console.error('Failed to load satellite crop:', err);
           alert('Could not load satellite imagery. Please try again.');
@@ -1635,23 +1707,24 @@
         }
       }
 
-      // Reset piece to top-right corner
+      // Reset piece to the right side, below the HUD
       function resetPiecePosition() {
-        piece.style.top = '12px';
+        const hudHeight = hudEl.getBoundingClientRect().height;
+        piece.style.top = `${hudHeight + 12}px`;
         piece.style.right = '12px';
         piece.style.left = 'auto';
         piece.style.bottom = 'auto';
       }
 
-      // Apply a random 90-degree rotation for Dizzy mode
+      // Apply a random 90-degree rotation to the piece image only (not the confirm button)
       function applyDizzyRotation() {
         const angles = [0, 90, 180, 270];
         const angle = angles[Math.floor(Math.random() * angles.length)];
-        piece.style.transform = `rotate(${angle}deg)`;
+        pieceImage.style.transform = `rotate(${angle}deg)`;
       }
 
       function resetPieceRotation() {
-        piece.style.transform = 'none';
+        pieceImage.style.transform = 'none';
       }
 
       // Clear markers
@@ -1668,9 +1741,18 @@
         return Math.round(1000 * (3000 - distance) / (3000 - 50));
       }
 
+      // Check whether the piece center is inside the HUD safe zone
+      function isPieceInHud() {
+        const rect = piece.getBoundingClientRect();
+        const centerY = rect.top + rect.height / 2;
+        const hudHeight = hudEl.getBoundingClientRect().height;
+        return centerY < hudHeight;
+      }
+
       // Handle confirmation (user clicks "Place here")
       function confirmPlacement() {
         if (!currentCity || !map || !currentTileCenter) return;
+        if (isPieceInHud()) return;
         confirmBtn.style.display = 'none';
         cityLabel.style.display = 'none';
         handleDrop();
@@ -1679,6 +1761,7 @@
       // Handle drop & score
       function handleDrop() {
         if (!currentCity || !map || !currentTileCenter) return;
+        if (isPieceInHud()) return;
         // Only stop the per-round timer in Blitz; time-trial and focus-run use a total timer
         if (gameMode === 'blitz') stopTimer();
 
@@ -1751,20 +1834,19 @@
 
         // Focus run: no feedback panel between tiles
         if (gameMode === 'focus-run') {
-          focusRunResults.push({
-            tile: focusRunTileIndex + 1,
+          roundResults.push({
+            round: focusRunTileIndex + 1,
+            city: currentCity.city,
+            country: currentCity.country,
             distance,
-            basePoints,
-            multiplier: currentMultiplier,
-            speedBonus,
-            totalPoints
+            points: totalPoints
           });
           piece.style.display = 'none';
           cityLabel.style.display = 'none';
           if (focusRunTileIndex < FOCUS_RUN_SIZES.length - 1) {
             focusRunTileIndex++;
             round = focusRunTileIndex + 1;
-            preloadNextRound();
+            maybePreloadNextRound();
             startRound();
           } else {
             showSummary();
@@ -1772,12 +1854,23 @@
           return;
         }
 
+        // Store round result for the summary / share card
+        roundResults.push({
+          round: round,
+          city: currentCity.city,
+          country: currentCity.country,
+          distance,
+          points: totalPoints
+        });
+
         // Hide piece and show feedback
         piece.style.display = 'none';
         feedbackEl.style.display = 'block';
         feedbackEl.classList.remove('slide-in');
         void feedbackEl.offsetWidth;
         feedbackEl.classList.add('slide-in');
+        // Infinite mode offers an explicit "End game" button on the feedback panel
+        endGameBtn.style.display = gameMode === 'infinite' ? 'block' : 'none';
         distanceText.textContent = `${Math.round(distance)}m away`;
         pointsText.textContent = totalPoints > 0 ? `+${totalPoints} points` : '0 points';
         pointsText.className = 'points ' + (totalPoints > 0 ? 'positive' : 'zero');
@@ -1789,8 +1882,8 @@
         }
         updateHUD();
 
-        // Preload next round while the feedback panel is open
-        preloadNextRound();
+        // Preload next round while the feedback panel is open (skip if already preloaded)
+        maybePreloadNextRound();
       }
 
       // Drag handlers
@@ -1807,8 +1900,22 @@
 
       function onDragMove(clientX, clientY) {
         if (!isDragging) return;
-        const x = clientX - dragOffset.x;
-        const y = clientY - dragOffset.y;
+        const pieceRect = piece.getBoundingClientRect();
+        const hudHeight = hudEl.getBoundingClientRect().height;
+        // The crosshair (placement point) is constrained to a safe area:
+        // below the HUD, above the confirm button, and within the screen
+        // horizontally. The tile can extend beyond the top/left/right edges so
+        // the crosshair reaches them, but the placement point is never allowed
+        // so low that the confirm button would leave the screen.
+        const bottomMargin = 30; // px, keeps the confirm button clearly visible
+        const minX = -pieceRect.width / 2;
+        const minY = hudHeight - pieceRect.height / 2;
+        const maxX = window.innerWidth - pieceRect.width / 2;
+        const maxY = window.innerHeight - pieceRect.height - bottomMargin;
+        let x = clientX - dragOffset.x;
+        let y = clientY - dragOffset.y;
+        x = Math.max(minX, Math.min(x, maxX));
+        y = Math.max(minY, Math.min(y, maxY));
         piece.style.left = `${x}px`;
         piece.style.top = `${y}px`;
         piece.style.right = 'auto';
@@ -1898,16 +2005,20 @@
           summarySubtitle.textContent = `${completedRounds} rounds completed`;
         } else if (gameMode === 'focus-run') {
           summaryTitle.textContent = 'Focus run complete!';
-          summarySubtitle.textContent = `out of ${getAchievableMaxScore(FOCUS_RUN_SIZES.length)} possible points · ${focusRunResults.length} of ${FOCUS_RUN_SIZES.length} tiles placed`;
-          focusSummaryList.style.display = 'block';
-          focusRunResults.forEach(r => {
-            const li = document.createElement('li');
-            li.innerHTML = `<span class="tile-distance">Tile ${r.tile}: ${Math.round(r.distance)}m</span><span class="tile-points">+${r.totalPoints}</span>`;
-            focusSummaryList.appendChild(li);
-          });
+          summarySubtitle.textContent = `out of ${getAchievableMaxScore(FOCUS_RUN_SIZES.length)} possible points · ${roundResults.length} of ${FOCUS_RUN_SIZES.length} tiles placed`;
         } else {
           summaryTitle.textContent = 'Game over';
           summarySubtitle.textContent = `${completedRounds} rounds completed`;
+        }
+
+        // Show per-round results (city + score) for all modes
+        if (roundResults.length > 0) {
+          focusSummaryList.style.display = 'block';
+          roundResults.forEach(r => {
+            const li = document.createElement('li');
+            li.innerHTML = `<span class="tile-distance">Round ${r.round}: ${r.city}, ${r.country} — ${Math.round(r.distance)}m</span><span class="tile-points">+${r.points}</span>`;
+            focusSummaryList.appendChild(li);
+          });
         }
 
         // Reset save prompt
@@ -2144,7 +2255,7 @@
         streak = 0;
         maxStreak = 0;
         currentMultiplier = 1.0;
-        focusRunResults = [];
+        roundResults = [];
         focusRunTileIndex = 0;
         focusRunCity = null;
         focusRunTileCenters = [];
@@ -2201,7 +2312,6 @@
       }
 
       // Event listeners
-      regionCheckboxes.addEventListener('change', populateCountries);
       document.getElementById('selectAllRegions').addEventListener('click', () => setAllCheckboxes(regionCheckboxes, true));
       document.getElementById('deselectAllRegions').addEventListener('click', () => setAllCheckboxes(regionCheckboxes, false));
       document.getElementById('selectAllCountries').addEventListener('click', () => setAllCheckboxes(countryCheckboxes, true));
@@ -2212,21 +2322,34 @@
           timeLimitField.style.display = mode === 'time-trial' ? 'block' : 'none';
         });
       });
+
       function goToStep(step) {
+        // Hide all steps, footers, and dots
+        wizardStep1.style.display = 'none';
+        wizardStep2.style.display = 'none';
+        wizardStep3.style.display = 'none';
+        footerStep1.style.display = 'none';
+        footerStep2.style.display = 'none';
+        footerStep3.style.display = 'none';
+        wizardDot1.classList.remove('active');
+        wizardDot2.classList.remove('active');
+        wizardDot3.classList.remove('active');
+
+        // Show target step, footer, and dot
         if (step === 1) {
           wizardStep1.style.display = 'block';
-          wizardStep2.style.display = 'none';
           footerStep1.style.display = 'flex';
-          footerStep2.style.display = 'none';
           wizardDot1.classList.add('active');
-          wizardDot2.classList.remove('active');
-        } else {
-          wizardStep1.style.display = 'none';
+        } else if (step === 2) {
           wizardStep2.style.display = 'block';
-          footerStep1.style.display = 'none';
           footerStep2.style.display = 'flex';
-          wizardDot1.classList.remove('active');
           wizardDot2.classList.add('active');
+        } else if (step === 3) {
+          wizardStep3.style.display = 'block';
+          footerStep3.style.display = 'flex';
+          wizardDot3.classList.add('active');
+          // Repopulate countries based on selected regions, defaulting all to selected
+          populateCountries(true);
         }
       }
 
@@ -2239,15 +2362,30 @@
       }
 
       playBtn.addEventListener('click', () => {
+        const selectedCountries = countryCheckboxes.querySelectorAll('input:checked');
+        if (selectedCountries.length === 0) {
+          alert('It is necessary to choose at least one country');
+          return;
+        }
         if (getFilteredCities().length === 0) {
           alert('Please select at least one region/country with cities.');
           return;
         }
         startGame();
       });
-      nextStepBtn.addEventListener('click', () => goToStep(2));
-      backStepBtn.addEventListener('click', () => goToStep(1));
+      nextStepBtn1.addEventListener('click', () => goToStep(2));
+      nextStepBtn2.addEventListener('click', () => {
+        const selectedRegions = regionCheckboxes.querySelectorAll('input:checked');
+        if (selectedRegions.length === 0) {
+          alert('It is necessary to choose at least one region');
+          return;
+        }
+        goToStep(3);
+      });
+      backStepBtn2.addEventListener('click', () => goToStep(1));
+      backStepBtn3.addEventListener('click', () => goToStep(2));
       nextBtn.addEventListener('click', nextRound);
+      endGameBtn.addEventListener('click', showSummary);
       menuBtn.addEventListener('click', () => {
         if (confirm('Are you sure you want to return to the menu? Your current progress will be lost.')) {
           showMenu();

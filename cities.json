@@ -5266,7 +5266,7 @@
   },
   {
     "country": "Spain",
-    "city": "Ibiza",
+    "city": "Eivissa",
     "lat": 38.9083,
     "lng": 1.4333,
     "radius": 7000,
@@ -6387,6 +6387,456 @@
     "radius": 7000,
     "regions": [
       "Mediterranean"
+    ]
+  },
+  {
+    "country": "Estonia",
+    "city": "Tallinn",
+    "lat": 59.437242,
+    "lng": 24.757269,
+    "radius": 7000,
+    "regions": [
+      "Baltic"
+    ]
+  },
+  {
+    "country": "Estonia",
+    "city": "Tartu",
+    "lat": 58.377953,
+    "lng": 26.729002,
+    "radius": 7000,
+    "regions": [
+      "Baltic"
+    ]
+  },
+  {
+    "country": "Estonia",
+    "city": "Narva",
+    "lat": 59.376746,
+    "lng": 28.191931,
+    "radius": 7000,
+    "regions": [
+      "Baltic"
+    ]
+  },
+  {
+    "country": "Estonia",
+    "city": "Pärnu",
+    "lat": 58.387066,
+    "lng": 24.502606,
+    "radius": 7000,
+    "regions": [
+      "Baltic"
+    ]
+  },
+  {
+    "country": "Estonia",
+    "city": "Kohtla-Järve",
+    "lat": 59.402549,
+    "lng": 27.288029,
+    "radius": 7000,
+    "regions": [
+      "Baltic"
+    ]
+  },
+  {
+    "country": "Estonia",
+    "city": "Viljandi",
+    "lat": 58.36454,
+    "lng": 25.587807,
+    "radius": 7000,
+    "regions": [
+      "Baltic"
+    ]
+  },
+  {
+    "country": "Estonia",
+    "city": "Rakvere",
+    "lat": 59.348223,
+    "lng": 26.361717,
+    "radius": 7000,
+    "regions": [
+      "Baltic"
+    ]
+  },
+  {
+    "country": "Estonia",
+    "city": "Maardu",
+    "lat": 59.468192,
+    "lng": 24.989675,
+    "radius": 7000,
+    "regions": [
+      "Baltic"
+    ]
+  },
+  {
+    "country": "Estonia",
+    "city": "Kuressaare",
+    "lat": 58.252769,
+    "lng": 22.484921,
+    "radius": 7000,
+    "regions": [
+      "Baltic"
+    ]
+  },
+  {
+    "country": "Estonia",
+    "city": "Sillamäe",
+    "lat": 59.396265,
+    "lng": 27.762556,
+    "radius": 7000,
+    "regions": [
+      "Baltic"
+    ]
+  },
+  {
+    "country": "Estonia",
+    "city": "Valga",
+    "lat": 57.777034,
+    "lng": 26.031563,
+    "radius": 7000,
+    "regions": [
+      "Baltic"
+    ]
+  },
+  {
+    "country": "Estonia",
+    "city": "Võru",
+    "lat": 57.838576,
+    "lng": 27.008651,
+    "radius": 7000,
+    "regions": [
+      "Baltic"
+    ]
+  },
+  {
+    "country": "Estonia",
+    "city": "Haapsalu",
+    "lat": 58.939902,
+    "lng": 23.54148,
+    "radius": 7000,
+    "regions": [
+      "Baltic"
+    ]
+  },
+  {
+    "country": "Estonia",
+    "city": "Keila",
+    "lat": 59.311092,
+    "lng": 24.420907,
+    "radius": 7000,
+    "regions": [
+      "Baltic"
+    ]
+  },
+  {
+    "country": "Estonia",
+    "city": "Paide",
+    "lat": 58.886927,
+    "lng": 25.569912,
+    "radius": 7000,
+    "regions": [
+      "Baltic"
+    ]
+  },
+  {
+    "country": "Latvia",
+    "city": "Riga",
+    "lat": 56.949398,
+    "lng": 24.105185,
+    "radius": 7000,
+    "regions": [
+      "Baltic"
+    ]
+  },
+  {
+    "country": "Latvia",
+    "city": "Daugavpils",
+    "lat": 55.871227,
+    "lng": 26.515934,
+    "radius": 7000,
+    "regions": [
+      "Baltic"
+    ]
+  },
+  {
+    "country": "Latvia",
+    "city": "Liepāja",
+    "lat": 56.504843,
+    "lng": 21.00709,
+    "radius": 7000,
+    "regions": [
+      "Baltic"
+    ]
+  },
+  {
+    "country": "Latvia",
+    "city": "Jelgava",
+    "lat": 56.652206,
+    "lng": 23.7292,
+    "radius": 7000,
+    "regions": [
+      "Baltic"
+    ]
+  },
+  {
+    "country": "Latvia",
+    "city": "Jūrmala",
+    "lat": 56.972716,
+    "lng": 23.788698,
+    "radius": 7000,
+    "regions": [
+      "Baltic"
+    ]
+  },
+  {
+    "country": "Latvia",
+    "city": "Ventspils",
+    "lat": 57.390392,
+    "lng": 21.563599,
+    "radius": 7000,
+    "regions": [
+      "Baltic"
+    ]
+  },
+  {
+    "country": "Latvia",
+    "city": "Rēzekne",
+    "lat": 56.506281,
+    "lng": 27.330662,
+    "radius": 7000,
+    "regions": [
+      "Baltic"
+    ]
+  },
+  {
+    "country": "Latvia",
+    "city": "Valmiera",
+    "lat": 57.538915,
+    "lng": 25.426169,
+    "radius": 7000,
+    "regions": [
+      "Baltic"
+    ]
+  },
+  {
+    "country": "Latvia",
+    "city": "Jēkabpils",
+    "lat": 56.495864,
+    "lng": 25.868775,
+    "radius": 7000,
+    "regions": [
+      "Baltic"
+    ]
+  },
+  {
+    "country": "Latvia",
+    "city": "Ogre",
+    "lat": 56.819204,
+    "lng": 24.607439,
+    "radius": 7000,
+    "regions": [
+      "Baltic"
+    ]
+  },
+  {
+    "country": "Latvia",
+    "city": "Tukums",
+    "lat": 56.966982,
+    "lng": 23.152453,
+    "radius": 7000,
+    "regions": [
+      "Baltic"
+    ]
+  },
+  {
+    "country": "Latvia",
+    "city": "Salaspils",
+    "lat": 56.863454,
+    "lng": 24.354521,
+    "radius": 7000,
+    "regions": [
+      "Baltic"
+    ]
+  },
+  {
+    "country": "Latvia",
+    "city": "Cēsis",
+    "lat": 57.313171,
+    "lng": 25.274855,
+    "radius": 7000,
+    "regions": [
+      "Baltic"
+    ]
+  },
+  {
+    "country": "Latvia",
+    "city": "Kuldīga",
+    "lat": 56.968576,
+    "lng": 21.960778,
+    "radius": 7000,
+    "regions": [
+      "Baltic"
+    ]
+  },
+  {
+    "country": "Latvia",
+    "city": "Sigulda",
+    "lat": 57.154056,
+    "lng": 24.856714,
+    "radius": 7000,
+    "regions": [
+      "Baltic"
+    ]
+  },
+  {
+    "country": "Lithuania",
+    "city": "Vilnius",
+    "lat": 54.687046,
+    "lng": 25.282911,
+    "radius": 7000,
+    "regions": [
+      "Baltic"
+    ]
+  },
+  {
+    "country": "Lithuania",
+    "city": "Kaunas",
+    "lat": 54.898214,
+    "lng": 23.904482,
+    "radius": 7000,
+    "regions": [
+      "Baltic"
+    ]
+  },
+  {
+    "country": "Lithuania",
+    "city": "Klaipėda",
+    "lat": 55.712753,
+    "lng": 21.135047,
+    "radius": 7000,
+    "regions": [
+      "Baltic"
+    ]
+  },
+  {
+    "country": "Lithuania",
+    "city": "Šiauliai",
+    "lat": 55.934082,
+    "lng": 23.315777,
+    "radius": 7000,
+    "regions": [
+      "Baltic"
+    ]
+  },
+  {
+    "country": "Lithuania",
+    "city": "Panevėžys",
+    "lat": 55.734499,
+    "lng": 24.357806,
+    "radius": 7000,
+    "regions": [
+      "Baltic"
+    ]
+  },
+  {
+    "country": "Lithuania",
+    "city": "Alytus",
+    "lat": 54.396134,
+    "lng": 24.045927,
+    "radius": 7000,
+    "regions": [
+      "Baltic"
+    ]
+  },
+  {
+    "country": "Lithuania",
+    "city": "Marijampolė",
+    "lat": 54.556254,
+    "lng": 23.350366,
+    "radius": 7000,
+    "regions": [
+      "Baltic"
+    ]
+  },
+  {
+    "country": "Lithuania",
+    "city": "Mažeikiai",
+    "lat": 56.311048,
+    "lng": 22.348472,
+    "radius": 7000,
+    "regions": [
+      "Baltic"
+    ]
+  },
+  {
+    "country": "Lithuania",
+    "city": "Jonava",
+    "lat": 55.073709,
+    "lng": 24.275696,
+    "radius": 7000,
+    "regions": [
+      "Baltic"
+    ]
+  },
+  {
+    "country": "Lithuania",
+    "city": "Utena",
+    "lat": 55.498438,
+    "lng": 25.602577,
+    "radius": 7000,
+    "regions": [
+      "Baltic"
+    ]
+  },
+  {
+    "country": "Lithuania",
+    "city": "Kėdainiai",
+    "lat": 55.288732,
+    "lng": 23.975836,
+    "radius": 7000,
+    "regions": [
+      "Baltic"
+    ]
+  },
+  {
+    "country": "Lithuania",
+    "city": "Telšiai",
+    "lat": 55.984614,
+    "lng": 22.249075,
+    "radius": 7000,
+    "regions": [
+      "Baltic"
+    ]
+  },
+  {
+    "country": "Lithuania",
+    "city": "Visaginas",
+    "lat": 55.59966,
+    "lng": 26.437007,
+    "radius": 7000,
+    "regions": [
+      "Baltic"
+    ]
+  },
+  {
+    "country": "Lithuania",
+    "city": "Tauragė",
+    "lat": 55.253363,
+    "lng": 22.29034,
+    "radius": 7000,
+    "regions": [
+      "Baltic"
+    ]
+  },
+  {
+    "country": "Lithuania",
+    "city": "Ukmergė",
+    "lat": 55.247729,
+    "lng": 24.759971,
+    "radius": 7000,
+    "regions": [
+      "Baltic"
     ]
   }
 ]
