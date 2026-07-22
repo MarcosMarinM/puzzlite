@@ -1355,14 +1355,17 @@
         return DEFAULT_CROP_SIZE;
       }
 
-      function pickRandomTileCenter(city, previousCenters) {
-        const bounds = map.getBounds();
+      function pickRandomTileCenter(city, previousCenters, skipBoundsCheck) {
         let attempts = 0;
         let found = false;
         let center;
         do {
           center = getRandomPointInRadius(city.lat, city.lng, city.radius || 7000);
-          found = isPointInBoundsWithPadding(center.lat, center.lng, bounds, 500);
+          found = true;
+          if (!skipBoundsCheck) {
+            const bounds = map.getBounds();
+            found = isPointInBoundsWithPadding(center.lat, center.lng, bounds, 500);
+          }
           if (found && previousCenters && previousCenters.length > 0) {
             const tooClose = previousCenters.some(pc => haversine(center.lat, center.lng, pc.lat, pc.lng) < 10);
             if (tooClose) found = false;
@@ -1384,7 +1387,7 @@
           preloadPromise = (async () => {
             try {
               const previous = focusRunTileCenters.slice(0, nextTileIndex);
-              const tileCenter = pickRandomTileCenter(city, previous);
+              const tileCenter = pickRandomTileCenter(city, previous, true);
               const cropSize = FOCUS_RUN_SIZES[nextTileIndex];
               const dataUrl = await captureSatelliteCrop(tileCenter.lat, tileCenter.lng, cropSize);
               nextRoundData = { mode: 'focus-run', tileIndex: nextTileIndex, city, tileCenter, dataUrl };
@@ -1401,7 +1404,7 @@
                 nextRoundData = null;
                 return;
               }
-              const tileCenter = pickRandomTileCenter(city);
+              const tileCenter = pickRandomTileCenter(city, undefined, true);
               const dataUrl = await captureSatelliteCrop(tileCenter.lat, tileCenter.lng, DEFAULT_CROP_SIZE);
               nextRoundData = { mode: gameMode, city, tileCenter, dataUrl };
             } catch (err) {
@@ -1600,10 +1603,11 @@
         if (nextRoundData && nextRoundData.mode === gameMode && (gameMode !== 'focus-run' || nextRoundData.tileIndex === focusRunTileIndex)) {
           currentCity = nextRoundData.city;
           currentTileCenter = nextRoundData.tileCenter;
+
           if (gameMode === 'focus-run') {
             focusRunTileCenters[focusRunTileIndex] = currentTileCenter;
           }
-          const dataUrl = nextRoundData.dataUrl;
+          let dataUrl = nextRoundData.dataUrl;
           nextRoundData = null;
           preloadPromise = null;
 
@@ -1611,6 +1615,27 @@
           cityLabel.style.display = 'block';
           map.setView([currentCity.lat, currentCity.lng], 14, { animate: false });
           map.setMinZoom(14);
+
+          // If the preloaded tile center is not visible in the current map view,
+          // regenerate it with bounds check (map is now correctly positioned)
+          if (!map.getBounds().contains([currentTileCenter.lat, currentTileCenter.lng])) {
+            loadingEl.innerHTML = '<div class="spinner"></div><div>Refining satellite image...</div>';
+            loadingEl.style.display = 'flex';
+            try {
+              const previous = gameMode === 'focus-run' ? focusRunTileCenters.slice(0, focusRunTileIndex) : [];
+              currentTileCenter = pickRandomTileCenter(currentCity, previous);
+              if (gameMode === 'focus-run') {
+                focusRunTileCenters[focusRunTileIndex] = currentTileCenter;
+              }
+              const cropSize = getCropSize();
+              dataUrl = await captureSatelliteCrop(currentTileCenter.lat, currentTileCenter.lng, cropSize);
+            } catch (err) {
+              console.error('Failed to regenerate satellite crop:', err);
+            } finally {
+              loadingEl.style.display = 'none';
+              loadingEl.innerHTML = '<div class="spinner"></div><div>Loading cities...</div>';
+            }
+          }
 
           pieceImage.style.backgroundImage = `url(${dataUrl})`;
           piece.style.display = 'block';
@@ -1746,7 +1771,8 @@
         const rect = piece.getBoundingClientRect();
         const centerY = rect.top + rect.height / 2;
         const hudHeight = hudEl.getBoundingClientRect().height;
-        return centerY < hudHeight;
+        // Add padding so the marker stays visually clear of the HUD overlay
+        return centerY < hudHeight + 60;
       }
 
       // Handle confirmation (user clicks "Place here")
@@ -1909,7 +1935,7 @@
         // so low that the confirm button would leave the screen.
         const bottomMargin = 30; // px, keeps the confirm button clearly visible
         const minX = -pieceRect.width / 2;
-        const minY = hudHeight - pieceRect.height / 2;
+        const minY = hudHeight - pieceRect.height / 2 + 60;
         const maxX = window.innerWidth - pieceRect.width / 2;
         const maxY = window.innerHeight - pieceRect.height - bottomMargin;
         let x = clientX - dragOffset.x;

@@ -7640,7 +7640,7 @@
     ]
   },
   {
-    "country": "Czech Republic",
+    "country": "Czechia",
     "city": "Prague",
     "lat": 50.0874654,
     "lng": 14.4212535,
@@ -7650,7 +7650,7 @@
     ]
   },
   {
-    "country": "Czech Republic",
+    "country": "Czechia",
     "city": "Brno",
     "lat": 49.1922443,
     "lng": 16.6113382,
@@ -7660,7 +7660,7 @@
     ]
   },
   {
-    "country": "Czech Republic",
+    "country": "Czechia",
     "city": "Ostrava",
     "lat": 49.8354045,
     "lng": 18.292978,
@@ -7670,7 +7670,7 @@
     ]
   },
   {
-    "country": "Czech Republic",
+    "country": "Czechia",
     "city": "Plzeň",
     "lat": 49.7477415,
     "lng": 13.3775249,
@@ -7680,7 +7680,7 @@
     ]
   },
   {
-    "country": "Czech Republic",
+    "country": "Czechia",
     "city": "Liberec",
     "lat": 50.7702648,
     "lng": 15.0583947,
@@ -7690,7 +7690,7 @@
     ]
   },
   {
-    "country": "Czech Republic",
+    "country": "Czechia",
     "city": "Olomouc",
     "lat": 49.5940567,
     "lng": 17.251143,
@@ -7700,7 +7700,7 @@
     ]
   },
   {
-    "country": "Czech Republic",
+    "country": "Czechia",
     "city": "České Budějovice",
     "lat": 48.9747357,
     "lng": 14.474285,
@@ -7710,7 +7710,7 @@
     ]
   },
   {
-    "country": "Czech Republic",
+    "country": "Czechia",
     "city": "Hradec Králové",
     "lat": 50.2092113,
     "lng": 15.8327512,
@@ -7720,7 +7720,7 @@
     ]
   },
   {
-    "country": "Czech Republic",
+    "country": "Czechia",
     "city": "Ústí nad Labem",
     "lat": 50.6603327,
     "lng": 14.0381357,
@@ -7730,7 +7730,7 @@
     ]
   },
   {
-    "country": "Czech Republic",
+    "country": "Czechia",
     "city": "Pardubice",
     "lat": 50.0385812,
     "lng": 15.7791356,
@@ -7740,7 +7740,7 @@
     ]
   },
   {
-    "country": "Czech Republic",
+    "country": "Czechia",
     "city": "Zlín",
     "lat": 49.226766,
     "lng": 17.6667415,
@@ -7750,7 +7750,7 @@
     ]
   },
   {
-    "country": "Czech Republic",
+    "country": "Czechia",
     "city": "Opava",
     "lat": 49.9389004,
     "lng": 17.9024174,
@@ -7760,7 +7760,7 @@
     ]
   },
   {
-    "country": "Czech Republic",
+    "country": "Czechia",
     "city": "Frýdek-Místek",
     "lat": 49.685635,
     "lng": 18.3483416,
@@ -7770,7 +7770,7 @@
     ]
   },
   {
-    "country": "Czech Republic",
+    "country": "Czechia",
     "city": "Havířov",
     "lat": 49.7801136,
     "lng": 18.4368451,
@@ -7780,7 +7780,7 @@
     ]
   },
   {
-    "country": "Czech Republic",
+    "country": "Czechia",
     "city": "Kladno",
     "lat": 49.7673576,
     "lng": 15.9729537,
@@ -7790,7 +7790,7 @@
     ]
   },
   {
-    "country": "Czech Republic",
+    "country": "Czechia",
     "city": "Most",
     "lat": 50.5032737,
     "lng": 13.636112,
@@ -7800,7 +7800,7 @@
     ]
   },
   {
-    "country": "Czech Republic",
+    "country": "Czechia",
     "city": "Karviná",
     "lat": 49.8542719,
     "lng": 18.5416556,
@@ -7810,7 +7810,7 @@
     ]
   },
   {
-    "country": "Czech Republic",
+    "country": "Czechia",
     "city": "Jihlava",
     "lat": 49.396064,
     "lng": 15.5903065,
@@ -7820,7 +7820,7 @@
     ]
   },
   {
-    "country": "Czech Republic",
+    "country": "Czechia",
     "city": "Teplice",
     "lat": 50.6406644,
     "lng": 13.8244461,
@@ -7830,7 +7830,7 @@
     ]
   },
   {
-    "country": "Czech Republic",
+    "country": "Czechia",
     "city": "Jablonec nad Nisou",
     "lat": 50.7240899,
     "lng": 15.1710958,
@@ -8072,8 +8072,8 @@
   {
     "country": "Hungary",
     "city": "Miskolc",
-    "lat": 48.1030643,
-    "lng": 20.7900429,
+    "lat": 48.1050369,
+    "lng": 20.7899170,
     "radius": 7000,
     "regions": [
       "Central Europe"
